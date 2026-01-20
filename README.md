@@ -103,41 +103,24 @@ El sitio se organiza en las siguientes secciones estratégicas:
    npm run build
    ```
 
-5. **Previsualizar build de producción**
-   ```bash
-   npm run preview
-   ```
-
 ---
 
 ## 🎨 Guía de Estilos
 
-El proyecto utiliza una paleta de colores basada en la marca global de Hult Prize:
+El proyecto utiliza una paleta de colores basada en la identidad visual oficial de Hult Prize at UNI:
 
 | Color | Código | Uso |
 |-------|--------|-----|
-| 🟡 **Primario** | `#FFCA05` | Dorado/Amarillo - Color principal de marca |
-| 🟣 **Secundario** | Degradado magenta → azul | Identidad visual de "Hulty" |
-| ⚫ **Fondo Oscuro** | `#1a1a2e` | Secciones con contraste |
-| ⚪ **Fondo Claro** | `#ffffff` | Secciones principales |
+| 🩷 **Magenta (Primario)** | `#E91E8C` | Color principal de fondo y marca |
+| 💗 **Magenta Claro** | `#F06BAC` | Hover states y acentos suaves |
+| 💜 **Magenta Oscuro** | `#C4177A` | Sombras y elementos secundarios |
+| ⚪ **Blanco** | `#FFFFFF` | Texto principal y elementos UI |
+| ⚫ **Negro** | `#1A1A1A` | Fondos de contraste |
 
----
-
-## 📂 Estructura de Archivos
-
-```
-hult-prize-uni/
-├── public/              # Archivos estáticos (imágenes, favicon)
-├── src/
-│   ├── components/      # Componentes reutilizables
-│   ├── layouts/         # Layouts de página
-│   ├── pages/           # Páginas del sitio
-│   └── styles/          # Estilos globales
-├── astro.config.mjs     # Configuración de Astro
-├── tailwind.config.js   # Configuración de Tailwind CSS
-├── tsconfig.json        # Configuración de TypeScript
-└── package.json         # Dependencias del proyecto
-```
+### Tipografía
+- **Títulos principales**: Bold, uppercase, con sombra para impacto visual
+- **Subtítulos**: Semi-bold con colores de acento
+- **Cuerpo de texto**: Regular, alta legibilidad
 
 ---
 

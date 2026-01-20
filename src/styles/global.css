@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@theme {
+  --color-hult-magenta: #E91E8C;
+  --color-hult-magenta-light: #F06BAC;
+  --color-hult-magenta-dark: #C4177A;
+  --color-hult-purple: #4A148C; /* Adding a deep purple for gradients */
+  --color-hult-black: #1A1A1A;
+  --color-hult-white: #FFFFFF;
+  --font-family-sans: 'Outfit', sans-serif;
+}
+
+/* Custom Utilities */
+@layer utilities {
+  .text-hult-gradient {
+    background: linear-gradient(to right, var(--color-hult-magenta), var(--color-hult-magenta-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .bg-hult-gradient {
+    background: linear-gradient(135deg, var(--color-hult-magenta) 0%, var(--color-hult-purple) 100%);
+  }
+}
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Outfit', sans-serif;
+  background-color: var(--color-hult-black);
+  color: var(--color-hult-white);
+  scroll-behavior: smooth;
+}
