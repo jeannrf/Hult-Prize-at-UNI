@@ -1,0 +1,47 @@
+---
+const pathname = new URL(Astro.request.url).pathname;
+---
+
+<header
+  class="fixed top-0 w-full z-50 bg-hult-black/50 backdrop-blur-md border-b border-white/10 transition-all duration-300"
+>
+  <div class="container mx-auto px-6 h-20 flex items-center justify-between">
+    <div class="flex items-center gap-2">
+      <a
+        href="/"
+        class="text-2xl font-black tracking-tighter text-white hover:text-hult-magenta transition-colors"
+      >
+        HULT PRIZE <span class="text-hult-magenta">UNI</span>
+      </a>
+    </div>
+    <nav class="hidden md:flex gap-8 items-center">
+      <a
+        href="/"
+        class={`text-sm font-medium transition-colors ${pathname === "/" ? "text-hult-magenta" : "text-white hover:text-hult-magenta"}`}
+        >Inicio</a
+      >
+      <a
+        href="/nosotros"
+        class={`text-sm font-medium transition-colors ${pathname.startsWith("/nosotros") ? "text-hult-magenta" : "text-white hover:text-hult-magenta"}`}
+        >Nosotros</a
+      >
+      <a
+        href="/cronograma"
+        class={`text-sm font-medium transition-colors ${pathname.startsWith("/cronograma") ? "text-hult-magenta" : "text-white hover:text-hult-magenta"}`}
+        >Cronograma</a
+      >
+      <a
+        href="/impacto"
+        class={`text-sm font-medium transition-colors ${pathname.startsWith("/impacto") ? "text-hult-magenta" : "text-white hover:text-hult-magenta"}`}
+        >Impacto</a
+      >
+    </nav>
+    <a
+      href="https://forms.gle/TU-LINK-AQUI"
+      target="_blank"
+      class="px-6 py-2.5 bg-hult-magenta hover:bg-hult-magenta-dark text-white font-bold rounded-full transition-all text-sm shadow-[0_0_20px_rgba(233,30,140,0.5)] hover:shadow-[0_0_30px_rgba(233,30,140,0.7)]"
+    >
+      Inscribir Equipo
+    </a>
+  </div>
+</header>
