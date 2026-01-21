@@ -4,7 +4,8 @@
   --color-hult-magenta: #E91E8C;
   --color-hult-magenta-light: #F06BAC;
   --color-hult-magenta-dark: #C4177A;
-  --color-hult-purple: #4A148C; /* Adding a deep purple for gradients */
+  --color-hult-purple: #4A148C;
+  /* Adding a deep purple for gradients */
   --color-hult-black: #1A1A1A;
   --color-hult-white: #FFFFFF;
   --font-family-sans: 'Outfit', sans-serif;
@@ -17,7 +18,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  
+
   .bg-hult-gradient {
     background: linear-gradient(135deg, var(--color-hult-magenta) 0%, var(--color-hult-purple) 100%);
   }
