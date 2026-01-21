@@ -1,0 +1,244 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Cronograma | Hult Prize at UNI 2026">
+  <!-- Navbar -->
+  <header
+    class="fixed top-0 w-full z-50 bg-hult-black/50 backdrop-blur-md border-b border-white/10"
+  >
+    <div class="container mx-auto px-6 h-20 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <a
+          href="/"
+          class="text-2xl font-black tracking-tighter text-white hover:text-hult-magenta transition-colors"
+        >
+          HULT PRIZE <span class="text-hult-magenta">UNI</span>
+        </a>
+      </div>
+      <nav class="hidden md:flex gap-8 items-center">
+        <a
+          href="/"
+          class="text-sm font-medium hover:text-hult-magenta transition-colors"
+          >Inicio</a
+        >
+        <a
+          href="/nosotros"
+          class="text-sm font-medium hover:text-hult-magenta transition-colors"
+          >Nosotros</a
+        >
+        <a
+          href="/cronograma"
+          class="text-sm font-medium text-hult-magenta transition-colors"
+          >Cronograma</a
+        >
+        <a
+          href="/#impacto"
+          class="text-sm font-medium hover:text-hult-magenta transition-colors"
+          >Impacto</a
+        >
+      </nav>
+      <a
+        href="https://forms.gle/TU-LINK-AQUI"
+        target="_blank"
+        class="px-6 py-2.5 bg-hult-magenta hover:bg-hult-magenta-dark text-white font-bold rounded-full transition-all text-sm shadow-[0_0_20px_rgba(233,30,140,0.5)] hover:shadow-[0_0_30px_rgba(233,30,140,0.7)]"
+      >
+        Inscribir Equipo
+      </a>
+    </div>
+  </header>
+
+  <main class="pt-24">
+    <!-- Header Page -->
+    <section class="relative py-20 overflow-hidden">
+      <div
+        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-hult-magenta/10 rounded-full blur-[120px] -z-10"
+      >
+      </div>
+      <div class="container mx-auto px-6 text-center">
+        <h1 class="text-5xl md:text-7xl font-black mb-6">
+          Roadmap <span class="text-hult-magenta">2026</span>
+        </h1>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+          Cada etapa es una oportunidad para aprender, iterar y transformar tu
+          idea en una solución de impacto global.
+        </p>
+      </div>
+    </section>
+
+    <!-- Timeline Section Completa -->
+    <section class="pb-24 relative overflow-hidden">
+      <!-- Decoraciones de fondo -->
+      <div
+        class="absolute left-1/2 top-0 -translate-x-1/2 w-[1px] h-full bg-linear-to-b from-transparent via-hult-magenta/30 to-transparent"
+      >
+      </div>
+
+      <div class="container mx-auto px-6 relative">
+        <div class="relative max-w-4xl mx-auto">
+          <!-- Item 1: Convocatoria -->
+          <div class="relative flex flex-col md:flex-row gap-8 mb-24 group">
+            <div
+              class="md:w-1/2 md:text-right order-2 md:order-1 relative pl-12 md:pl-0 md:pr-16"
+            >
+              <h4
+                class="text-3xl font-bold text-white mb-3 group-hover:text-hult-magenta transition-colors"
+              >
+                Convocatoria General
+              </h4>
+              <p class="text-gray-300 text-lg mb-4 leading-relaxed">
+                Etapa de difusión e inscripciones. Formación de equipos
+                multidisciplinarios y reclutamiento de embajadores.
+              </p>
+              <div class="inline-flex flex-col items-end gap-1">
+                <span class="text-2xl font-black text-hult-magenta"
+                  >ENE - FEB</span
+                >
+                <span class="text-sm text-gray-500 uppercase tracking-widest"
+                  >Fase 1</span
+                >
+              </div>
+            </div>
+
+            <div
+              class="absolute left-4 md:left-1/2 -translate-x-[5px] md:-translate-x-1/2 w-6 h-6 bg-hult-black border-4 border-hult-magenta rounded-full z-10 group-hover:scale-125 group-hover:bg-hult-magenta transition-all duration-300 shadow-[0_0_20px_rgba(233,30,140,0.6)]"
+            >
+            </div>
+
+            <div
+              class="md:w-1/2 order-3 md:order-3 pl-12 md:pl-16 opacity-50 text-8xl font-black text-white/5 absolute right-0 top-0 -z-10 select-none"
+            >
+              01
+            </div>
+          </div>
+
+          <!-- Item 2: Bootcamp -->
+          <div class="relative flex flex-col md:flex-row gap-8 mb-24 group">
+            <div
+              class="md:w-1/2 md:text-right order-2 md:order-1 pl-12 md:pl-0 md:pr-16 hidden md:block opacity-50 text-8xl font-black text-white/5 absolute left-0 top-0 -z-10 select-none"
+            >
+              02
+            </div>
+
+            <div
+              class="absolute left-4 md:left-1/2 -translate-x-[5px] md:-translate-x-1/2 w-6 h-6 bg-hult-black border-4 border-hult-magenta rounded-full z-10 group-hover:scale-125 group-hover:bg-hult-magenta transition-all duration-300 shadow-[0_0_20px_rgba(233,30,140,0.6)]"
+            >
+            </div>
+
+            <div class="md:w-1/2 order-3 md:order-3 relative pl-12 md:pl-16">
+              <h4
+                class="text-3xl font-bold text-white mb-3 group-hover:text-hult-magenta transition-colors"
+              >
+                Bootcamp Hult Prize
+              </h4>
+              <p class="text-gray-300 text-lg mb-4 leading-relaxed">
+                Talleres intensivos virtuales y presenciales. Expertos en Design
+                Thinking, Pitching y Modelo de Negocios te guiarán.
+              </p>
+              <div class="inline-flex flex-col items-start gap-1">
+                <span class="text-2xl font-black text-hult-magenta">MARZO</span>
+                <span class="text-sm text-gray-500 uppercase tracking-widest"
+                  >Fase 2</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3: Semifinales -->
+          <div class="relative flex flex-col md:flex-row gap-8 mb-24 group">
+            <div
+              class="md:w-1/2 md:text-right order-2 md:order-1 relative pl-12 md:pl-0 md:pr-16"
+            >
+              <h4
+                class="text-3xl font-bold text-white mb-3 group-hover:text-hult-magenta transition-colors"
+              >
+                Semifinales Internas
+              </h4>
+              <p class="text-gray-300 text-lg mb-4 leading-relaxed">
+                Primera ronda eliminatoria. Los equipos presentan su MVP ante un
+                panel de jurados preliminar.
+              </p>
+              <div class="inline-flex flex-col items-end gap-1">
+                <span class="text-2xl font-black text-hult-magenta">ABRIL</span>
+                <span class="text-sm text-gray-500 uppercase tracking-widest"
+                  >Fase 3</span
+                >
+              </div>
+            </div>
+
+            <div
+              class="absolute left-4 md:left-1/2 -translate-x-[5px] md:-translate-x-1/2 w-6 h-6 bg-hult-black border-4 border-hult-magenta rounded-full z-10 group-hover:scale-125 group-hover:bg-hult-magenta transition-all duration-300 shadow-[0_0_20px_rgba(233,30,140,0.6)]"
+            >
+            </div>
+
+            <div
+              class="md:w-1/2 order-3 md:order-3 pl-12 md:pl-16 opacity-50 text-8xl font-black text-white/5 absolute right-0 top-0 -z-10 select-none"
+            >
+              03
+            </div>
+          </div>
+
+          <!-- Item 4: GRAN FINAL -->
+          <div class="relative flex flex-col md:flex-row gap-8 group">
+            <div
+              class="md:w-1/2 md:text-right order-2 md:order-1 pl-12 md:pl-0 md:pr-16 hidden md:block opacity-50 text-8xl font-black text-white/5 absolute left-0 top-0 -z-10 select-none"
+            >
+              04
+            </div>
+
+            <div
+              class="absolute left-4 md:left-1/2 -translate-x-[5px] md:-translate-x-1/2 w-8 h-8 bg-hult-magenta border-4 border-hult-magenta/30 rounded-full z-10 group-hover:scale-125 transition-all duration-300 shadow-[0_0_30px_rgba(233,30,140,0.8)] animate-pulse"
+            >
+            </div>
+
+            <div class="md:w-1/2 order-3 md:order-3 relative pl-12 md:pl-16">
+              <h4
+                class="text-4xl font-black text-white mb-3 tracking-tight group-hover:text-hult-magenta transition-colors"
+              >
+                GRAN FINAL UNI
+              </h4>
+              <p class="text-gray-300 text-lg mb-4 leading-relaxed">
+                El evento principal. Los mejores equipos compiten por
+                representar a la UNI en las Regionales (Summits).
+              </p>
+              <div class="inline-flex flex-col items-start gap-1">
+                <span class="text-3xl font-black text-hult-magenta"
+                  >MAYO 2026</span
+                >
+                <span class="text-sm text-gray-500 uppercase tracking-widest"
+                  >Evento Principal</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-12 border-t border-white/10 bg-black/40">
+    <div
+      class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6"
+    >
+      <div class="text-center md:text-left">
+        <h4 class="font-black text-2xl tracking-tighter">
+          HULT PRIZE <span class="text-hult-magenta">UNI</span>
+        </h4>
+        <p class="text-gray-500 text-sm mt-2">
+          © 2026 Hult Prize at UNI. All rights reserved.
+        </p>
+      </div>
+      <div class="flex gap-6">
+        <a href="#" class="text-gray-400 hover:text-white transition-colors"
+          >Instagram</a
+        >
+        <a href="#" class="text-gray-400 hover:text-white transition-colors"
+          >LinkedIn</a
+        >
+        <a href="#" class="text-gray-400 hover:text-white transition-colors"
+          >Facebook</a
+        >
+      </div>
+    </div>
+  </footer>
+</Layout>
