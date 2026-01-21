@@ -27,14 +27,16 @@ import Layout from "../layouts/Layout.astro";
             </div>
         </div>
 
-        <!-- NAVBAR - Transparent, positioned absolutely over image -->
-        <header class="absolute top-0 left-0 w-full z-50">
+        <!-- NAVBAR - Fixed, stays visible when scrolling -->
+        <header
+            class="fixed top-0 left-0 w-full z-50 bg-hult-black/50 backdrop-blur-md border-b border-white/10"
+        >
             <div
-                class="container mx-auto px-6 h-20 flex items-center justify-between backdrop-blur-sm bg-black/20"
+                class="container mx-auto px-6 h-20 flex items-center justify-between"
             >
                 <div class="flex items-center gap-2">
                     <span
-                        class="text-2xl font-black tracking-tighter text-white drop-shadow-lg"
+                        class="text-2xl font-black tracking-tighter text-white"
                     >
                         HULT PRIZE <span class="text-hult-magenta">UNI</span>
                     </span>
@@ -42,22 +44,22 @@ import Layout from "../layouts/Layout.astro";
                 <nav class="hidden md:flex gap-8 items-center">
                     <a
                         href="/"
-                        class="text-sm font-medium text-white hover:text-hult-magenta transition-colors drop-shadow-md"
+                        class="text-sm font-medium text-white hover:text-hult-magenta transition-colors"
                         >Inicio</a
                     >
                     <a
                         href="/nosotros"
-                        class="text-sm font-medium text-white hover:text-hult-magenta transition-colors drop-shadow-md"
+                        class="text-sm font-medium text-white hover:text-hult-magenta transition-colors"
                         >Nosotros</a
                     >
                     <a
                         href="/cronograma"
-                        class="text-sm font-medium text-white hover:text-hult-magenta transition-colors drop-shadow-md"
+                        class="text-sm font-medium text-white hover:text-hult-magenta transition-colors"
                         >Cronograma</a
                     >
                     <a
                         href="/impacto"
-                        class="text-sm font-medium text-hult-magenta transition-colors drop-shadow-md"
+                        class="text-sm font-medium text-hult-magenta transition-colors"
                         >Impacto</a
                     >
                 </nav>
@@ -198,10 +200,31 @@ import Layout from "../layouts/Layout.astro";
                 </div>
             </div>
         </div>
+
+        <!-- Scroll Indicator - Minimal animated chevron -->
+        <a
+            href="#objetivos"
+            class="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 cursor-pointer"
+        >
+            <div class="animate-bounce">
+                <svg
+                    class="w-8 h-8 text-white/60 hover:text-hult-magenta transition-colors"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M19 9l-7 7-7-7"></path>
+                </svg>
+            </div>
+        </a>
     </section>
 
     <!-- Objetivos Section -->
-    <section class="py-20 bg-hult-black">
+    <section id="objetivos" class="py-20 bg-hult-black">
         <div class="container mx-auto px-6">
             <!-- Section Title -->
             <div class="text-center mb-16">
