@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
 
 const teamMembers = [
   {
@@ -37,49 +38,7 @@ const carouselMembers = [...teamMembers, ...teamMembers, ...teamMembers];
 
 <Layout title="Nosotros | Hult Prize at UNI 2026">
   <!-- Navbar (Misma que en home pero con rutas relativas) -->
-  <header
-    class="fixed top-0 w-full z-50 bg-hult-black/50 backdrop-blur-md border-b border-white/10"
-  >
-    <div class="container mx-auto px-6 h-20 flex items-center justify-between">
-      <div class="flex items-center gap-2">
-        <a
-          href="/"
-          class="text-2xl font-black tracking-tighter text-white hover:text-hult-magenta transition-colors"
-        >
-          HULT PRIZE <span class="text-hult-magenta">UNI</span>
-        </a>
-      </div>
-      <nav class="hidden md:flex gap-8 items-center">
-        <a
-          href="/"
-          class="text-sm font-medium hover:text-hult-magenta transition-colors"
-          >Inicio</a
-        >
-        <a
-          href="/nosotros"
-          class="text-sm font-medium text-hult-magenta transition-colors"
-          >Nosotros</a
-        >
-        <a
-          href="/#cronograma"
-          class="text-sm font-medium hover:text-hult-magenta transition-colors"
-          >Cronograma</a
-        >
-        <a
-          href="/#impacto"
-          class="text-sm font-medium hover:text-hult-magenta transition-colors"
-          >Impacto</a
-        >
-      </nav>
-      <a
-        href="https://forms.gle/TU-LINK-AQUI"
-        target="_blank"
-        class="px-6 py-2.5 bg-hult-magenta hover:bg-hult-magenta-dark text-white font-bold rounded-full transition-all text-sm shadow-[0_0_20px_rgba(233,30,140,0.5)] hover:shadow-[0_0_30px_rgba(233,30,140,0.7)]"
-      >
-        Inscribir Equipo
-      </a>
-    </div>
-  </header>
+  <Navbar />
 
   <main class="pt-24">
     <!-- Header Page -->
@@ -106,7 +65,7 @@ const carouselMembers = [...teamMembers, ...teamMembers, ...teamMembers];
         <div class="mb-16 max-w-5xl mx-auto relative group">
           <button
             id="carousel-prev"
-            class="absolute left-2 md:-left-16 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full bg-hult-black/50 text-white hover:bg-hult-magenta hover:scale-110 transition-all backdrop-blur-sm shadow-lg cursor-pointer md:opacity-0 md:group-hover:opacity-100 hidden md:block"
+            class="absolute left-2 md:-left-16 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full bg-hult-black/50 text-white hover:bg-hult-magenta hover:scale-110 transition-all backdrop-blur-sm shadow-lg cursor-pointer hidden md:block"
             aria-label="Anterior"
           >
             <svg
@@ -126,7 +85,7 @@ const carouselMembers = [...teamMembers, ...teamMembers, ...teamMembers];
 
           <button
             id="carousel-next"
-            class="absolute right-2 md:-right-16 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full bg-hult-black/50 text-white hover:bg-hult-magenta hover:scale-110 transition-all backdrop-blur-sm shadow-lg cursor-pointer md:opacity-0 md:group-hover:opacity-100 hidden md:block"
+            class="absolute right-2 md:-right-16 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full bg-hult-black/50 text-white hover:bg-hult-magenta hover:scale-110 transition-all backdrop-blur-sm shadow-lg cursor-pointer hidden md:block"
             aria-label="Siguiente"
           >
             <svg
@@ -194,7 +153,7 @@ const carouselMembers = [...teamMembers, ...teamMembers, ...teamMembers];
         </div>
 
         <!-- Áreas: Partnership, Marketing, Eventos -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           <!-- Partnership -->
           <article
             class="group relative bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-hult-magenta/50 transition-colors duration-300"
@@ -326,7 +285,7 @@ const carouselMembers = [...teamMembers, ...teamMembers, ...teamMembers];
         </div>
 
         <!-- Info Card: Qué es Hult Prize at UNI -->
-        <div class="mt-24">
+        <div class="mt-24 max-w-5xl mx-auto">
           <div
             class="bg-linear-to-r from-hult-magenta to-hult-magenta-dark rounded-3xl p-8 md:p-12 text-white shadow-[0_0_40px_rgba(230,0,126,0.3)]"
           >

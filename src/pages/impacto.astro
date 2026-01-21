@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
 ---
 
 <Layout title="Impacto - Hult Prize at UNI 2026">
@@ -27,51 +28,7 @@ import Layout from "../layouts/Layout.astro";
             </div>
         </div>
 
-        <!-- NAVBAR - Fixed, stays visible when scrolling -->
-        <header
-            class="fixed top-0 left-0 w-full z-50 bg-hult-black/50 backdrop-blur-md border-b border-white/10"
-        >
-            <div
-                class="container mx-auto px-6 h-20 flex items-center justify-between"
-            >
-                <div class="flex items-center gap-2">
-                    <span
-                        class="text-2xl font-black tracking-tighter text-white"
-                    >
-                        HULT PRIZE <span class="text-hult-magenta">UNI</span>
-                    </span>
-                </div>
-                <nav class="hidden md:flex gap-8 items-center">
-                    <a
-                        href="/"
-                        class="text-sm font-medium text-white hover:text-hult-magenta transition-colors"
-                        >Inicio</a
-                    >
-                    <a
-                        href="/nosotros"
-                        class="text-sm font-medium text-white hover:text-hult-magenta transition-colors"
-                        >Nosotros</a
-                    >
-                    <a
-                        href="/cronograma"
-                        class="text-sm font-medium text-white hover:text-hult-magenta transition-colors"
-                        >Cronograma</a
-                    >
-                    <a
-                        href="/impacto"
-                        class="text-sm font-medium text-hult-magenta transition-colors"
-                        >Impacto</a
-                    >
-                </nav>
-                <a
-                    href="https://forms.gle/TU-LINK-AQUI"
-                    target="_blank"
-                    class="px-6 py-2.5 bg-hult-magenta hover:bg-hult-magenta-dark text-white font-bold rounded-full transition-all text-sm shadow-[0_0_20px_rgba(233,30,140,0.5)] hover:shadow-[0_0_30px_rgba(233,30,140,0.7)]"
-                >
-                    Inscribir Equipo
-                </a>
-            </div>
-        </header>
+        <Navbar />
 
         <!-- CONTENT - Centered vertically and horizontally, z-index above everything -->
         <div

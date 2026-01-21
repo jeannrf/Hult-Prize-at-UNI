@@ -1,51 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
 ---
 
 <Layout title="Hult Prize at UNI 2026 - Official Landing Page">
 	<!-- Navbar (Simple Glassmorphism) -->
-	<header
-		class="fixed top-0 w-full z-50 bg-hult-black/50 backdrop-blur-md border-b border-white/10"
-	>
-		<div
-			class="container mx-auto px-6 h-20 flex items-center justify-between"
-		>
-			<div class="flex items-center gap-2">
-				<span class="text-2xl font-black tracking-tighter text-white">
-					HULT PRIZE <span class="text-hult-magenta">UNI</span>
-				</span>
-			</div>
-			<nav class="hidden md:flex gap-8 items-center">
-				<a
-					href="#inicio"
-					class="text-sm font-medium hover:text-hult-magenta transition-colors"
-					>Inicio</a
-				>
-				<a
-					href="/nosotros"
-					class="text-sm font-medium hover:text-hult-magenta transition-colors"
-					>Nosotros</a
-				>
-				<a
-					href="/cronograma"
-					class="text-sm font-medium hover:text-hult-magenta transition-colors"
-					>Cronograma</a
-				>
-				<a
-					href="/impacto"
-					class="text-sm font-medium hover:text-hult-magenta transition-colors"
-					>Impacto</a
-				>
-			</nav>
-			<a
-				href="https://forms.gle/TU-LINK-AQUI"
-				target="_blank"
-				class="px-6 py-2.5 bg-hult-magenta hover:bg-hult-magenta-dark text-white font-bold rounded-full transition-all text-sm shadow-[0_0_20px_rgba(233,30,140,0.5)] hover:shadow-[0_0_30px_rgba(233,30,140,0.7)]"
-			>
-				Inscribir Equipo
-			</a>
-		</div>
-	</header>
+	<Navbar />
 
 	<main>
 		<!-- Hero Section -->
@@ -88,8 +48,7 @@ import Layout from "../layouts/Layout.astro";
 				<div
 					class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-8 animate-fade-in-up"
 				>
-					<span
-						class="w-2 h-2 rounded-full bg-hult-magenta animate-pulse"
+					<span class="w-2 h-2 rounded-full bg-hult-magenta animate-pulse"
 					></span>
 					<span
 						class="text-sm font-medium text-gray-300 tracking-wider uppercase"
@@ -111,9 +70,9 @@ import Layout from "../layouts/Layout.astro";
 				<p
 					class="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-10 font-light leading-relaxed"
 				>
-					Únete al movimiento de emprendimiento social más grande del
-					mundo. Un año, un desafío, <span
-						class="text-white font-semibold">$1,000,000 USD</span
+					Únete al movimiento de emprendimiento social más grande del mundo. Un
+					año, un desafío, <span class="text-white font-semibold"
+						>$1,000,000 USD</span
 					> para tu visión.
 				</p>
 
@@ -143,42 +102,34 @@ import Layout from "../layouts/Layout.astro";
 			<div class="container mx-auto px-6">
 				<div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
 					<div>
-						<span
-							class="block text-4xl md:text-5xl font-black text-white mb-2"
+						<span class="block text-4xl md:text-5xl font-black text-white mb-2"
 							>120+</span
 						>
-						<span
-							class="text-sm text-gray-400 uppercase tracking-widest"
+						<span class="text-sm text-gray-400 uppercase tracking-widest"
 							>Países</span
 						>
 					</div>
 					<div>
-						<span
-							class="block text-4xl md:text-5xl font-black text-white mb-2"
+						<span class="block text-4xl md:text-5xl font-black text-white mb-2"
 							>3000+</span
 						>
-						<span
-							class="text-sm text-gray-400 uppercase tracking-widest"
+						<span class="text-sm text-gray-400 uppercase tracking-widest"
 							>Universidades</span
 						>
 					</div>
 					<div>
-						<span
-							class="block text-4xl md:text-5xl font-black text-white mb-2"
+						<span class="block text-4xl md:text-5xl font-black text-white mb-2"
 							>$1M</span
 						>
-						<span
-							class="text-sm text-gray-400 uppercase tracking-widest"
+						<span class="text-sm text-gray-400 uppercase tracking-widest"
 							>Capital Semilla</span
 						>
 					</div>
 					<div>
-						<span
-							class="block text-4xl md:text-5xl font-black text-white mb-2"
+						<span class="block text-4xl md:text-5xl font-black text-white mb-2"
 							>UNI</span
 						>
-						<span
-							class="text-sm text-gray-400 uppercase tracking-widest"
+						<span class="text-sm text-gray-400 uppercase tracking-widest"
 							>On Campus</span
 						>
 					</div>
@@ -187,10 +138,7 @@ import Layout from "../layouts/Layout.astro";
 		</section>
 
 		<!-- About Section & Teams Preview -->
-		<section
-			id="nosotros"
-			class="py-24 relative overflow-hidden bg-hult-black"
-		>
+		<section id="nosotros" class="py-24 relative overflow-hidden bg-hult-black">
 			<!-- Background Elements -->
 			<div
 				class="absolute top-0 right-0 w-1/3 h-full bg-linear-to-l from-hult-magenta/5 to-transparent pointer-events-none"
@@ -226,9 +174,8 @@ import Layout from "../layouts/Layout.astro";
 							<span class="text-hult-magenta">Hult UNI 2026</span>
 						</h3>
 						<p class="text-gray-300 text-lg leading-relaxed mb-8">
-							Detrás del evento de emprendimiento social más
-							grande de la UNI, hay un equipo apasionado de
-							líderes estudiantiles trabajando en <span
+							Detrás del evento de emprendimiento social más grande de la UNI,
+							hay un equipo apasionado de líderes estudiantiles trabajando en <span
 								class="text-white font-bold"
 								>Director, Partnership, Marketing y Eventos</span
 							> para hacerlo realidad.
@@ -239,8 +186,7 @@ import Layout from "../layouts/Layout.astro";
 							class="inline-flex items-center gap-2 text-white font-bold hover:text-hult-magenta transition-colors group"
 						>
 							Ver a todos los equipos
-							<span
-								class="group-hover:translate-x-1 transition-transform"
+							<span class="group-hover:translate-x-1 transition-transform"
 								>→</span
 							>
 						</a>
@@ -261,13 +207,11 @@ import Layout from "../layouts/Layout.astro";
 					Fases
 				</h2>
 				<h3 class="text-4xl md:text-5xl font-black mb-6 text-white">
-					Sigue el Camino al <span class="text-hult-magenta"
-						>Éxito</span
-					>
+					Sigue el Camino al <span class="text-hult-magenta">Éxito</span>
 				</h3>
 				<p class="text-gray-400 max-w-2xl mx-auto mb-16 text-lg">
-					Desde las primeras charlas informativas hasta la gran final,
-					estas son las etapas clave del Hult Prize at UNI 2026.
+					Desde las primeras charlas informativas hasta la gran final, estas son
+					las etapas clave del Hult Prize at UNI 2026.
 				</p>
 
 				<div
@@ -281,14 +225,12 @@ import Layout from "../layouts/Layout.astro";
 						>
 							<span class="text-6xl font-black">01</span>
 						</div>
-						<h4
-							class="text-2xl font-black text-white mb-3 text-left"
-						>
+						<h4 class="text-2xl font-black text-white mb-3 text-left">
 							Charlas<br />Informativas
 						</h4>
 						<p class="text-gray-400 text-left">
-							Descubre de qué trata el reto y cómo puedes cambiar
-							el mundo con tu idea.
+							Descubre de qué trata el reto y cómo puedes cambiar el mundo con
+							tu idea.
 						</p>
 					</div>
 					<div
@@ -299,14 +241,12 @@ import Layout from "../layouts/Layout.astro";
 						>
 							<span class="text-6xl font-black">02</span>
 						</div>
-						<h4
-							class="text-2xl font-black text-white mb-3 text-left"
-						>
+						<h4 class="text-2xl font-black text-white mb-3 text-left">
 							Talleres de<br />Capacitación
 						</h4>
 						<p class="text-gray-400 text-left">
-							Aprende sobre modelo de negocio, validación y
-							pitching con expertos.
+							Aprende sobre modelo de negocio, validación y pitching con
+							expertos.
 						</p>
 					</div>
 					<div
@@ -317,14 +257,12 @@ import Layout from "../layouts/Layout.astro";
 						>
 							<span class="text-6xl font-black">03</span>
 						</div>
-						<h4
-							class="text-2xl font-black text-white mb-3 text-left"
-						>
+						<h4 class="text-2xl font-black text-white mb-3 text-left">
 							Gran<br />Final UNI
 						</h4>
 						<p class="text-gray-400 text-left">
-							Presenta tu propuesta ante un jurado y compite por
-							el capital semilla.
+							Presenta tu propuesta ante un jurado y compite por el capital
+							semilla.
 						</p>
 					</div>
 				</div>
@@ -339,9 +277,7 @@ import Layout from "../layouts/Layout.astro";
 		</section>
 
 		<!-- CTA Final -->
-		<section
-			class="py-24 bg-linear-to-b from-transparent to-hult-magenta/10"
-		>
+		<section class="py-24 bg-linear-to-b from-transparent to-hult-magenta/10">
 			<div class="container mx-auto px-6 text-center">
 				<h2 class="text-4xl md:text-5xl font-black mb-8">
 					¿Listo para el <span
@@ -350,8 +286,8 @@ import Layout from "../layouts/Layout.astro";
 					>
 				</h2>
 				<p class="text-xl text-gray-300 max-w-2xl mx-auto mb-10">
-					No necesitas ser un experto en negocios. Solo necesitas una
-					idea y la pasión para cambiar el mundo.
+					No necesitas ser un experto en negocios. Solo necesitas una idea y la
+					pasión para cambiar el mundo.
 				</p>
 				<a
 					href="https://forms.gle/TU-LINK-AQUI"
@@ -377,19 +313,13 @@ import Layout from "../layouts/Layout.astro";
 				</p>
 			</div>
 			<div class="flex gap-6">
-				<a
-					href="#"
-					class="text-gray-400 hover:text-white transition-colors"
+				<a href="#" class="text-gray-400 hover:text-white transition-colors"
 					>Instagram</a
 				>
-				<a
-					href="#"
-					class="text-gray-400 hover:text-white transition-colors"
+				<a href="#" class="text-gray-400 hover:text-white transition-colors"
 					>LinkedIn</a
 				>
-				<a
-					href="#"
-					class="text-gray-400 hover:text-white transition-colors"
+				<a href="#" class="text-gray-400 hover:text-white transition-colors"
 					>Facebook</a
 				>
 			</div>
