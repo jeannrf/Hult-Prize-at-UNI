@@ -75,29 +75,28 @@ import Layout from "../layouts/Layout.astro";
             href="https://www.linkedin.com/in/saul-canturin-159a32187/"
             target="_blank"
             rel="noopener noreferrer"
-            class="w-full max-w-sm group relative bg-white border border-white/10 rounded-3xl overflow-hidden hover:border-hult-magenta/50 transition-all duration-300 transform hover:-translate-y-2 block"
+            class="w-full max-w-sm group relative bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-hult-magenta/50 transition-all duration-300 transform hover:-translate-y-2 block"
           >
             <!-- Image Container -->
             <div class="aspect-[4/5] bg-neutral-800 relative overflow-hidden">
-              <!-- Placeholder for Profile Image -->
-              <div
-                class="absolute inset-0 flex items-center justify-center text-neutral-600 group-hover:scale-105 transition-transform duration-700 bg-neutral-200"
-              >
-                <span class="text-8xl">👔</span>
-              </div>
+              <img
+                src="/saul-canturin.png"
+                alt="Saúl Canturín"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              />
             </div>
 
             <!-- Text Content -->
-            <div class="p-8 bg-white text-left">
+            <div class="p-8 text-left">
               <h4
-                class="text-3xl font-black text-[#1A1A1A] mb-2 group-hover:text-hult-magenta transition-colors"
+                class="text-3xl font-black text-white mb-2 group-hover:text-hult-magenta transition-colors"
               >
                 Saúl Canturín
               </h4>
               <p class="text-hult-magenta font-bold text-lg mb-2">
                 Campus Director en Hult Prize at UNI
               </p>
-              <p class="text-gray-500 font-medium text-base">
+              <p class="text-gray-400 font-medium text-base">
                 Ingeniería Económica
               </p>
             </div>
@@ -111,11 +110,11 @@ import Layout from "../layouts/Layout.astro";
             class="group relative bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-hult-magenta/50 transition-colors duration-300"
           >
             <div class="aspect-video bg-neutral-800 relative overflow-hidden">
-              <div
-                class="absolute inset-0 flex items-center justify-center text-neutral-600 group-hover:scale-105 transition-transform duration-700"
-              >
-                <span class="text-7xl">🤝</span>
-              </div>
+              <img
+                src="/partnership.jpg"
+                alt="Partnership"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              />
               <div
                 class="absolute inset-0 bg-linear-to-t from-hult-black/90 via-transparent to-transparent"
               >
@@ -154,11 +153,11 @@ import Layout from "../layouts/Layout.astro";
             class="group relative bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-hult-magenta/50 transition-colors duration-300"
           >
             <div class="aspect-video bg-neutral-800 relative overflow-hidden">
-              <div
-                class="absolute inset-0 flex items-center justify-center text-neutral-600 group-hover:scale-105 transition-transform duration-700"
-              >
-                <span class="text-7xl">📢</span>
-              </div>
+              <img
+                src="/marketing.png"
+                alt="Marketing"
+                class="w-full h-full object-cover scale-110 group-hover:scale-125 transition-transform duration-700"
+              />
               <div
                 class="absolute inset-0 bg-linear-to-t from-hult-black/90 via-transparent to-transparent"
               >
@@ -197,11 +196,11 @@ import Layout from "../layouts/Layout.astro";
             class="group relative bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-hult-magenta/50 transition-colors duration-300"
           >
             <div class="aspect-video bg-neutral-800 relative overflow-hidden">
-              <div
-                class="absolute inset-0 flex items-center justify-center text-neutral-600 group-hover:scale-105 transition-transform duration-700"
-              >
-                <span class="text-7xl">🎉</span>
-              </div>
+              <img
+                src="/eventos.jpg"
+                alt="Eventos"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              />
               <div
                 class="absolute inset-0 bg-linear-to-t from-hult-black/90 via-transparent to-transparent"
               >
@@ -234,6 +233,56 @@ import Layout from "../layouts/Layout.astro";
               </div>
             </div>
           </article>
+        </div>
+
+        <!-- Info Card: Qué es Hult Prize at UNI -->
+        <div class="mt-24">
+          <div
+            class="bg-linear-to-r from-hult-magenta to-hult-magenta-dark rounded-3xl p-8 md:p-12 text-white shadow-[0_0_40px_rgba(230,0,126,0.3)]"
+          >
+            <div class="flex flex-col md:flex-row gap-6 md:gap-8 items-start">
+              <div
+                class="shrink-0 bg-white/20 p-4 rounded-2xl backdrop-blur-sm"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-10 h-10"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"
+                  ></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-2xl md:text-3xl font-black mb-4">
+                  ¿Qué es Hult Prize at UNI?
+                </h3>
+                <p class="text-white/90 text-lg leading-relaxed">
+                  Hult Prize at UNI es la plataforma local de la competencia de
+                  emprendimiento social más grande del mundo, donde estudiantes
+                  universitarios transforman ideas innovadoras en soluciones que
+                  impactan positivamente al mundo. Nos alineamos con los
+                  Objetivos de Desarrollo Sostenible (ODS) de las Naciones
+                  Unidas, impulsando proyectos que aborden los retos más
+                  apremiantes de nuestra sociedad.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slogan -->
+        <div class="mt-16 text-center max-w-4xl mx-auto px-4">
+          <p class="text-white text-xl md:text-2xl font-medium leading-relaxed">
+            "Empoderamos a estudiantes para innovar y transformar el mundo con
+            soluciones alineadas a los ODS."
+          </p>
         </div>
       </div>
     </section>
