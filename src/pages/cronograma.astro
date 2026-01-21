@@ -70,32 +70,33 @@ import Layout from "../layouts/Layout.astro";
     <section class="pb-24 relative overflow-hidden">
       <!-- Decoraciones de fondo -->
       <div
-        class="absolute left-1/2 top-0 -translate-x-1/2 w-[1px] h-full bg-linear-to-b from-transparent via-hult-magenta/30 to-transparent"
+        class="absolute left-1/2 top-0 -translate-x-1/2 w-[2px] h-full bg-hult-magenta/60 shadow-[0_0_15px_rgba(233,30,140,0.3)]"
       >
       </div>
 
       <div class="container mx-auto px-6 relative">
         <div class="relative max-w-4xl mx-auto">
-          <!-- Item 1: Convocatoria -->
-          <div class="relative flex flex-col md:flex-row gap-8 mb-24 group">
+          <!-- Item 1: Charla Informativa 1 -->
+          <div
+            class="relative flex flex-col md:flex-row gap-8 mb-24 group items-center"
+          >
             <div
               class="md:w-1/2 md:text-right order-2 md:order-1 relative pl-12 md:pl-0 md:pr-16"
             >
               <h4
                 class="text-3xl font-bold text-white mb-3 group-hover:text-hult-magenta transition-colors"
               >
-                Convocatoria General
+                Charla Informativa 1
               </h4>
               <p class="text-gray-300 text-lg mb-4 leading-relaxed">
-                Etapa de difusión e inscripciones. Formación de equipos
-                multidisciplinarios y reclutamiento de embajadores.
+                Conoce todo sobre el Hult Prize 2026, los beneficios de
+                participar y cómo formar tu equipo ideal.
               </p>
               <div class="inline-flex flex-col items-end gap-1">
-                <span class="text-2xl font-black text-hult-magenta"
-                  >ENE - FEB</span
+                <span class="text-2xl font-black text-hult-magenta">20 ENE</span
                 >
                 <span class="text-sm text-gray-500 uppercase tracking-widest"
-                  >Fase 1</span
+                  >Lanzamiento</span
                 >
               </div>
             </div>
@@ -106,16 +107,18 @@ import Layout from "../layouts/Layout.astro";
             </div>
 
             <div
-              class="md:w-1/2 order-3 md:order-3 pl-12 md:pl-16 opacity-50 text-8xl font-black text-white/5 absolute right-0 top-0 -z-10 select-none"
+              class="md:w-1/2 order-3 md:order-3 pl-12 md:pl-16 relative opacity-50 text-8xl font-black text-white/5 select-none hidden md:block"
             >
               01
             </div>
           </div>
 
-          <!-- Item 2: Bootcamp -->
-          <div class="relative flex flex-col md:flex-row gap-8 mb-24 group">
+          <!-- Item 2: Charla Informativa 2 -->
+          <div
+            class="relative flex flex-col md:flex-row gap-8 mb-24 group items-center"
+          >
             <div
-              class="md:w-1/2 md:text-right order-2 md:order-1 pl-12 md:pl-0 md:pr-16 hidden md:block opacity-50 text-8xl font-black text-white/5 absolute left-0 top-0 -z-10 select-none"
+              class="md:w-1/2 md:text-right order-2 md:order-1 pl-12 md:pl-0 md:pr-16 relative opacity-50 text-8xl font-black text-white/5 select-none hidden md:block"
             >
               02
             </div>
@@ -129,39 +132,43 @@ import Layout from "../layouts/Layout.astro";
               <h4
                 class="text-3xl font-bold text-white mb-3 group-hover:text-hult-magenta transition-colors"
               >
-                Bootcamp Hult Prize
+                Charla Informativa 2
               </h4>
               <p class="text-gray-300 text-lg mb-4 leading-relaxed">
-                Talleres intensivos virtuales y presenciales. Expertos en Design
-                Thinking, Pitching y Modelo de Negocios te guiarán.
+                Segunda sesión informativa para resolver dudas de último minuto
+                y conectar con más participantes.
               </p>
               <div class="inline-flex flex-col items-start gap-1">
-                <span class="text-2xl font-black text-hult-magenta">MARZO</span>
+                <span class="text-2xl font-black text-hult-magenta">23 ENE</span
+                >
                 <span class="text-sm text-gray-500 uppercase tracking-widest"
-                  >Fase 2</span
+                  >Sesión 2</span
                 >
               </div>
             </div>
           </div>
 
-          <!-- Item 3: Semifinales -->
-          <div class="relative flex flex-col md:flex-row gap-8 mb-24 group">
+          <!-- Item 3: Taller 1 -->
+          <div
+            class="relative flex flex-col md:flex-row gap-8 mb-24 group items-center"
+          >
             <div
               class="md:w-1/2 md:text-right order-2 md:order-1 relative pl-12 md:pl-0 md:pr-16"
             >
               <h4
                 class="text-3xl font-bold text-white mb-3 group-hover:text-hult-magenta transition-colors"
               >
-                Semifinales Internas
+                Taller 1: Problematización
               </h4>
               <p class="text-gray-300 text-lg mb-4 leading-relaxed">
-                Primera ronda eliminatoria. Los equipos presentan su MVP ante un
-                panel de jurados preliminar.
+                Aprende a identificar y definir problemas reales que valgan la
+                pena resolver bajo el desafío del año.
               </p>
               <div class="inline-flex flex-col items-end gap-1">
-                <span class="text-2xl font-black text-hult-magenta">ABRIL</span>
+                <span class="text-2xl font-black text-hult-magenta">FASE 1</span
+                >
                 <span class="text-sm text-gray-500 uppercase tracking-widest"
-                  >Fase 3</span
+                  >Ideación</span
                 >
               </div>
             </div>
@@ -172,43 +179,154 @@ import Layout from "../layouts/Layout.astro";
             </div>
 
             <div
-              class="md:w-1/2 order-3 md:order-3 pl-12 md:pl-16 opacity-50 text-8xl font-black text-white/5 absolute right-0 top-0 -z-10 select-none"
+              class="md:w-1/2 order-3 md:order-3 pl-12 md:pl-16 relative opacity-50 text-8xl font-black text-white/5 select-none hidden md:block"
             >
               03
             </div>
           </div>
 
-          <!-- Item 4: GRAN FINAL -->
-          <div class="relative flex flex-col md:flex-row gap-8 group">
+          <!-- Item 4: Taller 2 -->
+          <div
+            class="relative flex flex-col md:flex-row gap-8 mb-24 group items-center"
+          >
             <div
-              class="md:w-1/2 md:text-right order-2 md:order-1 pl-12 md:pl-0 md:pr-16 hidden md:block opacity-50 text-8xl font-black text-white/5 absolute left-0 top-0 -z-10 select-none"
+              class="md:w-1/2 md:text-right order-2 md:order-1 pl-12 md:pl-0 md:pr-16 relative opacity-50 text-8xl font-black text-white/5 select-none hidden md:block"
             >
               04
             </div>
 
             <div
-              class="absolute left-4 md:left-1/2 -translate-x-[5px] md:-translate-x-1/2 w-8 h-8 bg-hult-magenta border-4 border-hult-magenta/30 rounded-full z-10 group-hover:scale-125 transition-all duration-300 shadow-[0_0_30px_rgba(233,30,140,0.8)] animate-pulse"
+              class="absolute left-4 md:left-1/2 -translate-x-[5px] md:-translate-x-1/2 w-6 h-6 bg-hult-black border-4 border-hult-magenta rounded-full z-10 group-hover:scale-125 group-hover:bg-hult-magenta transition-all duration-300 shadow-[0_0_20px_rgba(233,30,140,0.6)]"
             >
             </div>
 
             <div class="md:w-1/2 order-3 md:order-3 relative pl-12 md:pl-16">
               <h4
-                class="text-4xl font-black text-white mb-3 tracking-tight group-hover:text-hult-magenta transition-colors"
+                class="text-3xl font-bold text-white mb-3 group-hover:text-hult-magenta transition-colors"
               >
-                GRAN FINAL UNI
+                Taller 2: Propuesta de Valor
               </h4>
               <p class="text-gray-300 text-lg mb-4 leading-relaxed">
-                El evento principal. Los mejores equipos compiten por
-                representar a la UNI en las Regionales (Summits).
+                Define qué hace única a tu solución y por qué tu público
+                objetivo la elegiría sobre otras opciones.
               </p>
               <div class="inline-flex flex-col items-start gap-1">
+                <span class="text-2xl font-black text-hult-magenta">FASE 2</span
+                >
+                <span class="text-sm text-gray-500 uppercase tracking-widest"
+                  >Estrategia</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 5: Taller 3 -->
+          <div
+            class="relative flex flex-col md:flex-row gap-8 mb-24 group items-center"
+          >
+            <div
+              class="md:w-1/2 md:text-right order-2 md:order-1 relative pl-12 md:pl-0 md:pr-16"
+            >
+              <h4
+                class="text-3xl font-bold text-white mb-3 group-hover:text-hult-magenta transition-colors"
+              >
+                Taller 3: Modelo de Negocio
+              </h4>
+              <p class="text-gray-300 text-lg mb-4 leading-relaxed">
+                Convierte tu idea en un negocio sostenible, escalable y con un
+                impacto social medible.
+              </p>
+              <div class="inline-flex flex-col items-end gap-1">
+                <span class="text-2xl font-black text-hult-magenta">FASE 3</span
+                >
+                <span class="text-sm text-gray-500 uppercase tracking-widest"
+                  >Sostenibilidad</span
+                >
+              </div>
+            </div>
+
+            <div
+              class="absolute left-4 md:left-1/2 -translate-x-[5px] md:-translate-x-1/2 w-6 h-6 bg-hult-black border-4 border-hult-magenta rounded-full z-10 group-hover:scale-125 group-hover:bg-hult-magenta transition-all duration-300 shadow-[0_0_20px_rgba(233,30,140,0.6)]"
+            >
+            </div>
+
+            <div
+              class="md:w-1/2 order-3 md:order-3 pl-12 md:pl-16 relative opacity-50 text-8xl font-black text-white/5 select-none hidden md:block"
+            >
+              05
+            </div>
+          </div>
+
+          <!-- Item 6: Taller 4 -->
+          <div
+            class="relative flex flex-col md:flex-row gap-8 mb-24 group items-center"
+          >
+            <div
+              class="md:w-1/2 md:text-right order-2 md:order-1 pl-12 md:pl-0 md:pr-16 relative opacity-50 text-8xl font-black text-white/5 select-none hidden md:block"
+            >
+              06
+            </div>
+
+            <div
+              class="absolute left-4 md:left-1/2 -translate-x-[5px] md:-translate-x-1/2 w-6 h-6 bg-hult-black border-4 border-hult-magenta rounded-full z-10 group-hover:scale-125 group-hover:bg-hult-magenta transition-all duration-300 shadow-[0_0_20px_rgba(233,30,140,0.6)]"
+            >
+            </div>
+
+            <div class="md:w-1/2 order-3 md:order-3 relative pl-12 md:pl-16">
+              <h4
+                class="text-3xl font-bold text-white mb-3 group-hover:text-hult-magenta transition-colors"
+              >
+                Taller 4: Validación
+              </h4>
+              <p class="text-gray-300 text-lg mb-4 leading-relaxed">
+                Pon a prueba tu MVP en el mundo real y utiliza el feedback para
+                iterar y perfeccionar tu propuesta.
+              </p>
+              <div class="inline-flex flex-col items-start gap-1">
+                <span class="text-2xl font-black text-hult-magenta">FASE 4</span
+                >
+                <span class="text-sm text-gray-500 uppercase tracking-widest"
+                  >Experimentación</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 7: Final -->
+          <div
+            class="relative flex flex-col md:flex-row gap-8 group items-center"
+          >
+            <div
+              class="md:w-1/2 md:text-right order-2 md:order-1 relative pl-12 md:pl-0 md:pr-16"
+            >
+              <h4
+                class="text-4xl font-black text-white mb-3 tracking-tight group-hover:text-hult-magenta transition-colors"
+              >
+                GRAN FINAL
+              </h4>
+              <p class="text-gray-300 text-lg mb-4 leading-relaxed">
+                El evento cumbre donde los mejores equipos presentan sus
+                soluciones ante un panel de jueces expertos.
+              </p>
+              <div class="inline-flex flex-col items-end gap-1">
                 <span class="text-3xl font-black text-hult-magenta"
-                  >MAYO 2026</span
+                  >PRÓXIMAMENTE</span
                 >
                 <span class="text-sm text-gray-500 uppercase tracking-widest"
                   >Evento Principal</span
                 >
               </div>
+            </div>
+
+            <div
+              class="absolute left-4 md:left-1/2 -translate-x-1/2 w-8 h-8 bg-hult-magenta border-4 border-hult-magenta/30 rounded-full z-10 group-hover:scale-125 transition-all duration-300 shadow-[0_0_30px_rgba(233,30,140,0.8)] animate-pulse"
+            >
+            </div>
+
+            <div
+              class="md:w-1/2 order-3 md:order-3 pl-12 md:pl-16 relative opacity-50 text-8xl font-black text-white/5 select-none hidden md:block"
+            >
+              07
             </div>
           </div>
         </div>
