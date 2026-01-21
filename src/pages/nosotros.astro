@@ -1,5 +1,38 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+const teamMembers = [
+  {
+    name: "Saúl Canturín",
+    role: "Campus Director en Hult Prize at UNI",
+    career: "Ingeniería Económica",
+    image: "/saul-canturin.png",
+    linkedin: "https://www.linkedin.com/in/saul-canturin-159a32187/",
+  },
+  {
+    name: "Ana García",
+    role: "Head of Operations",
+    career: "Ingeniería Industrial",
+    image: "/member-placeholder.png",
+    linkedin: "#",
+  },
+  {
+    name: "Carlos López",
+    role: "Finance Manager",
+    career: "Ingeniería de Sistemas",
+    image: "/member-placeholder.png",
+    linkedin: "#",
+  },
+  {
+    name: "María Rodríguez",
+    role: "Startups Coordinator",
+    career: "Arquitectura",
+    image: "/member-placeholder.png",
+    linkedin: "#",
+  },
+];
+
+const carouselMembers = [...teamMembers, ...teamMembers, ...teamMembers];
 ---
 
 <Layout title="Nosotros | Hult Prize at UNI 2026">
@@ -69,38 +102,95 @@ import Layout from "../layouts/Layout.astro";
     <!-- Teams Grid -->
     <section class="pb-24 relative">
       <div class="container mx-auto px-6">
-        <!-- Director General -->
-        <div class="flex justify-center mb-16">
-          <a
-            href="https://www.linkedin.com/in/saul-canturin-159a32187/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="w-full max-w-sm group relative bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-hult-magenta/50 transition-all duration-300 transform hover:-translate-y-2 block"
+        <!-- Liderazgo (Carousel) -->
+        <div class="mb-16 max-w-5xl mx-auto relative group">
+          <button
+            id="carousel-prev"
+            class="absolute left-2 md:-left-16 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full bg-hult-black/50 text-white hover:bg-hult-magenta hover:scale-110 transition-all backdrop-blur-sm shadow-lg cursor-pointer md:opacity-0 md:group-hover:opacity-100 hidden md:block"
+            aria-label="Anterior"
           >
-            <!-- Image Container -->
-            <div class="aspect-[4/5] bg-neutral-800 relative overflow-hidden">
-              <img
-                src="/saul-canturin.png"
-                alt="Saúl Canturín"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-              />
-            </div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 19.5L8.25 12l7.5-7.5"></path>
+            </svg>
+          </button>
 
-            <!-- Text Content -->
-            <div class="p-8 text-left">
-              <h4
-                class="text-3xl font-black text-white mb-2 group-hover:text-hult-magenta transition-colors"
-              >
-                Saúl Canturín
-              </h4>
-              <p class="text-hult-magenta font-bold text-lg mb-2">
-                Campus Director en Hult Prize at UNI
-              </p>
-              <p class="text-gray-400 font-medium text-base">
-                Ingeniería Económica
-              </p>
-            </div>
-          </a>
+          <button
+            id="carousel-next"
+            class="absolute right-2 md:-right-16 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full bg-hult-black/50 text-white hover:bg-hult-magenta hover:scale-110 transition-all backdrop-blur-sm shadow-lg cursor-pointer md:opacity-0 md:group-hover:opacity-100 hidden md:block"
+            aria-label="Siguiente"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+            </svg>
+          </button>
+
+          <div
+            id="team-carousel"
+            class="flex overflow-x-auto gap-8 snap-x snap-mandatory pb-8 -mx-6 px-6 md:mx-0 md:px-0"
+            style="scrollbar-width: none; -ms-overflow-style: none;"
+          >
+            {
+              carouselMembers.map((member, index) => (
+                <a
+                  href={member.linkedin}
+                  target={member.linkedin !== "#" ? "_blank" : undefined}
+                  rel="noopener noreferrer"
+                  draggable="false"
+                  class="snap-center shrink-0 w-[75%] sm:w-[calc(50%-16px)] md:w-[calc(33.333%-22px)] group relative bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-hult-magenta/50 transition-all duration-300 transform hover:-translate-y-2 block select-none"
+                  data-index={index}
+                >
+                  <div class="aspect-[4/5] bg-neutral-800 relative overflow-hidden pointer-events-none">
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      class={`w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ${member.image.includes("placeholder") ? "opacity-80 group-hover:opacity-100" : ""}`}
+                      draggable="false"
+                    />
+                    {member.linkedin !== "#" && (
+                      <div class="absolute bottom-3 right-3 bg-white/90 p-1.5 rounded-lg shadow-lg backdrop-blur-sm group-hover:bg-white transition-colors z-20">
+                        <img
+                          src="/linkedin-logo.png"
+                          alt="LinkedIn"
+                          class="w-5 h-5 object-contain"
+                        />
+                      </div>
+                    )}
+                  </div>
+                  <div class="p-8 text-left">
+                    <h4 class="text-3xl font-black text-white mb-2 group-hover:text-hult-magenta transition-colors">
+                      {member.name}
+                    </h4>
+                    <p class="text-hult-magenta font-bold text-lg mb-2">
+                      {member.role}
+                    </p>
+                    <p class="text-gray-400 font-medium text-base">
+                      {member.career}
+                    </p>
+                  </div>
+                </a>
+              ))
+            }
+          </div>
         </div>
 
         <!-- Áreas: Partnership, Marketing, Eventos -->
@@ -255,7 +345,7 @@ import Layout from "../layouts/Layout.astro";
                   <path
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"
+                    d="M15.042 21.672 13.684 16.6m0 0-2.51 2.225.569-9.47 5.227 7.917-3.286-.672ZM12 2.25V4.5m5.834.166-1.591 1.591M20.25 10.5H18M7.757 14.743l-1.59 1.59M6 10.5H3.75m4.007-4.243-1.59-1.59"
                   ></path>
                 </svg>
               </div>
@@ -314,3 +404,71 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </footer>
 </Layout>
+
+<script>
+  const carousel = document.getElementById("team-carousel");
+
+  if (carousel) {
+    const checkScroll = () => {
+      const scrollLeft = carousel.scrollLeft;
+      const scrollWidth = carousel.scrollWidth;
+      const clientWidth = carousel.clientWidth;
+      const thirdWidth = scrollWidth / 3;
+
+      // If we scroll into the first third (left buffer), jump to the middle third
+      if (scrollLeft < 50) {
+        // small buffer
+        carousel.style.scrollBehavior = "auto";
+        carousel.scrollLeft = scrollLeft + thirdWidth;
+        carousel.style.scrollBehavior = "smooth";
+      }
+      // If we scroll into the last third (right buffer), jump to the middle third
+      else if (scrollLeft >= thirdWidth * 2 - 50) {
+        carousel.style.scrollBehavior = "auto";
+        carousel.scrollLeft = scrollLeft - thirdWidth;
+        carousel.style.scrollBehavior = "smooth";
+      }
+    };
+
+    // Initialize scroll position to the middle set (Set 2)
+    const initScroll = () => {
+      carousel.style.scrollBehavior = "auto"; // Disable smooth scroll for init
+      carousel.scrollLeft = carousel.scrollWidth / 3;
+      // Re-enable smooth scroll after a tick
+      setTimeout(() => {
+        carousel.style.scrollBehavior = "smooth";
+      }, 50);
+    };
+
+    // Initialize logic
+    // We need to wait for images/layout to stabilize mostly, but rough set is fine
+    window.addEventListener("load", initScroll);
+    // Also try immediately incase load already happened
+    initScroll();
+
+    // Attach scroll listener
+    carousel.addEventListener("scroll", checkScroll);
+
+    // Buttons
+    const prevBtn = document.getElementById("carousel-prev");
+    const nextBtn = document.getElementById("carousel-next");
+
+    if (prevBtn && nextBtn) {
+      prevBtn.addEventListener("click", () => {
+        const card = carousel.querySelector("a");
+        if (card) {
+          const scrollAmount = card.clientWidth + 32; // width + gap
+          carousel.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+        }
+      });
+
+      nextBtn.addEventListener("click", () => {
+        const card = carousel.querySelector("a");
+        if (card) {
+          const scrollAmount = card.clientWidth + 32;
+          carousel.scrollBy({ left: scrollAmount, behavior: "smooth" });
+        }
+      });
+    }
+  }
+</script>
