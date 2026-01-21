@@ -1,0 +1,326 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Nosotros | Hult Prize at UNI 2026">
+  <!-- Navbar (Misma que en home pero con rutas relativas) -->
+  <header
+    class="fixed top-0 w-full z-50 bg-hult-black/50 backdrop-blur-md border-b border-white/10"
+  >
+    <div class="container mx-auto px-6 h-20 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <a
+          href="/"
+          class="text-2xl font-black tracking-tighter text-white hover:text-hult-magenta transition-colors"
+        >
+          HULT PRIZE <span class="text-hult-magenta">UNI</span>
+        </a>
+      </div>
+      <nav class="hidden md:flex gap-8 items-center">
+        <a
+          href="/"
+          class="text-sm font-medium hover:text-hult-magenta transition-colors"
+          >Inicio</a
+        >
+        <a
+          href="/nosotros"
+          class="text-sm font-medium text-hult-magenta transition-colors"
+          >Nosotros</a
+        >
+        <a
+          href="/#cronograma"
+          class="text-sm font-medium hover:text-hult-magenta transition-colors"
+          >Cronograma</a
+        >
+        <a
+          href="/#impacto"
+          class="text-sm font-medium hover:text-hult-magenta transition-colors"
+          >Impacto</a
+        >
+      </nav>
+      <a
+        href="https://forms.gle/TU-LINK-AQUI"
+        target="_blank"
+        class="px-6 py-2.5 bg-hult-magenta hover:bg-hult-magenta-dark text-white font-bold rounded-full transition-all text-sm shadow-[0_0_20px_rgba(233,30,140,0.5)] hover:shadow-[0_0_30px_rgba(233,30,140,0.7)]"
+      >
+        Inscribir Equipo
+      </a>
+    </div>
+  </header>
+
+  <main class="pt-24">
+    <!-- Header Page -->
+    <section class="relative py-20 overflow-hidden">
+      <div
+        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-hult-magenta/10 rounded-full blur-[120px] -z-10"
+      >
+      </div>
+      <div class="container mx-auto px-6 text-center">
+        <h1 class="text-5xl md:text-7xl font-black mb-6">
+          Nuestro <span class="text-hult-magenta">Equipo</span>
+        </h1>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+          Conoce a los líderes estudiantiles que hacen posible el Hult Prize en
+          la Universidad Nacional de Ingeniería.
+        </p>
+      </div>
+    </section>
+
+    <!-- Teams Grid -->
+    <section class="pb-24 relative">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <!-- Team Item: Dirección & Partnership -->
+          <article
+            class="group relative bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-hult-magenta/50 transition-colors duration-300"
+          >
+            <div class="aspect-video bg-neutral-800 relative overflow-hidden">
+              <div
+                class="absolute inset-0 flex items-center justify-center text-neutral-600 group-hover:scale-105 transition-transform duration-700"
+              >
+                <span class="text-7xl">🤝</span>
+              </div>
+              <div
+                class="absolute inset-0 bg-linear-to-t from-hult-black/90 via-transparent to-transparent"
+              >
+              </div>
+              <div class="absolute bottom-6 left-8">
+                <h4 class="text-3xl font-black text-white">
+                  Partnership & Dirección
+                </h4>
+              </div>
+            </div>
+            <div class="p-8">
+              <p class="text-gray-300 mb-8 text-base leading-relaxed">
+                Encargados de forjar alianzas estratégicas y dirigir la visión
+                general del evento, conectando con mentores, jueces y
+                patrocinadores para potenciar el impacto.
+              </p>
+              <div class="border-t border-white/10 pt-6">
+                <h5
+                  class="text-hult-magenta text-xs font-bold uppercase tracking-wider mb-4 flex items-center gap-2"
+                >
+                  <span class="w-2 h-2 rounded-full bg-hult-magenta"></span> Integrantes
+                </h5>
+                <ul
+                  class="grid grid-cols-1 sm:grid-cols-2 gap-y-2 gap-x-4 text-sm text-white/80"
+                >
+                  <li class="flex items-center gap-2">
+                    <span class="w-1 h-1 rounded-full bg-white/30"></span> Nombre
+                    Apellido
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="w-1 h-1 rounded-full bg-white/30"></span> Nombre
+                    Apellido
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="w-1 h-1 rounded-full bg-white/30"></span> Nombre
+                    Apellido
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="w-1 h-1 rounded-full bg-white/30"></span> Nombre
+                    Apellido
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <!-- Team Item: Marketing -->
+          <article
+            class="group relative bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-hult-magenta/50 transition-colors duration-300"
+          >
+            <div class="aspect-video bg-neutral-800 relative overflow-hidden">
+              <div
+                class="absolute inset-0 flex items-center justify-center text-neutral-600 group-hover:scale-105 transition-transform duration-700"
+              >
+                <span class="text-7xl">📢</span>
+              </div>
+              <div
+                class="absolute inset-0 bg-linear-to-t from-hult-black/90 via-transparent to-transparent"
+              >
+              </div>
+              <div class="absolute bottom-6 left-8">
+                <h4 class="text-3xl font-black text-white">
+                  Marketing & Comunicaciones
+                </h4>
+              </div>
+            </div>
+            <div class="p-8">
+              <p class="text-gray-300 mb-8 text-base leading-relaxed">
+                La voz de Hult Prize. Gestionan la marca, redes sociales, diseño
+                gráfico y campañas creativas para inspirar a toda la comunidad
+                universitaria.
+              </p>
+              <div class="border-t border-white/10 pt-6">
+                <h5
+                  class="text-hult-magenta text-xs font-bold uppercase tracking-wider mb-4 flex items-center gap-2"
+                >
+                  <span class="w-2 h-2 rounded-full bg-hult-magenta"></span> Integrantes
+                </h5>
+                <ul
+                  class="grid grid-cols-1 sm:grid-cols-2 gap-y-2 gap-x-4 text-sm text-white/80"
+                >
+                  <li class="flex items-center gap-2">
+                    <span class="w-1 h-1 rounded-full bg-white/30"></span> Nombre
+                    Apellido
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="w-1 h-1 rounded-full bg-white/30"></span> Nombre
+                    Apellido
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="w-1 h-1 rounded-full bg-white/30"></span> Nombre
+                    Apellido
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="w-1 h-1 rounded-full bg-white/30"></span> Nombre
+                    Apellido
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <!-- Team Item: Logística -->
+          <article
+            class="group relative bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-hult-magenta/50 transition-colors duration-300"
+          >
+            <div class="aspect-video bg-neutral-800 relative overflow-hidden">
+              <div
+                class="absolute inset-0 flex items-center justify-center text-neutral-600 group-hover:scale-105 transition-transform duration-700"
+              >
+                <span class="text-7xl">⚙️</span>
+              </div>
+              <div
+                class="absolute inset-0 bg-linear-to-t from-hult-black/90 via-transparent to-transparent"
+              >
+              </div>
+              <div class="absolute bottom-6 left-8">
+                <h4 class="text-3xl font-black text-white">
+                  Logística & Operaciones
+                </h4>
+              </div>
+            </div>
+            <div class="p-8">
+              <p class="text-gray-300 mb-8 text-base leading-relaxed">
+                El motor del evento. Aseguran que cada detalle técnico, espacio
+                físico o virtual y recurso necesario esté listo para una
+                experiencia impecable.
+              </p>
+              <div class="border-t border-white/10 pt-6">
+                <h5
+                  class="text-hult-magenta text-xs font-bold uppercase tracking-wider mb-4 flex items-center gap-2"
+                >
+                  <span class="w-2 h-2 rounded-full bg-hult-magenta"></span> Integrantes
+                </h5>
+                <ul
+                  class="grid grid-cols-1 sm:grid-cols-2 gap-y-2 gap-x-4 text-sm text-white/80"
+                >
+                  <li class="flex items-center gap-2">
+                    <span class="w-1 h-1 rounded-full bg-white/30"></span> Nombre
+                    Apellido
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="w-1 h-1 rounded-full bg-white/30"></span> Nombre
+                    Apellido
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="w-1 h-1 rounded-full bg-white/30"></span> Nombre
+                    Apellido
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="w-1 h-1 rounded-full bg-white/30"></span> Nombre
+                    Apellido
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <!-- Team Item: Gestión de Talento -->
+          <article
+            class="group relative bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-hult-magenta/50 transition-colors duration-300"
+          >
+            <div class="aspect-video bg-neutral-800 relative overflow-hidden">
+              <div
+                class="absolute inset-0 flex items-center justify-center text-neutral-600 group-hover:scale-105 transition-transform duration-700"
+              >
+                <span class="text-7xl">👥</span>
+              </div>
+              <div
+                class="absolute inset-0 bg-linear-to-t from-hult-black/90 via-transparent to-transparent"
+              >
+              </div>
+              <div class="absolute bottom-6 left-8">
+                <h4 class="text-3xl font-black text-white">
+                  Community & Talent
+                </h4>
+              </div>
+            </div>
+            <div class="p-8">
+              <p class="text-gray-300 mb-8 text-base leading-relaxed">
+                Responsables de la experiencia única de los participantes
+                (competitors journey), reclutamiento de voluntarios y el
+                bienestar general del equipo organizador.
+              </p>
+              <div class="border-t border-white/10 pt-6">
+                <h5
+                  class="text-hult-magenta text-xs font-bold uppercase tracking-wider mb-4 flex items-center gap-2"
+                >
+                  <span class="w-2 h-2 rounded-full bg-hult-magenta"></span> Integrantes
+                </h5>
+                <ul
+                  class="grid grid-cols-1 sm:grid-cols-2 gap-y-2 gap-x-4 text-sm text-white/80"
+                >
+                  <li class="flex items-center gap-2">
+                    <span class="w-1 h-1 rounded-full bg-white/30"></span> Nombre
+                    Apellido
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="w-1 h-1 rounded-full bg-white/30"></span> Nombre
+                    Apellido
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="w-1 h-1 rounded-full bg-white/30"></span> Nombre
+                    Apellido
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="w-1 h-1 rounded-full bg-white/30"></span> Nombre
+                    Apellido
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-12 border-t border-white/10 bg-black/40">
+    <div
+      class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6"
+    >
+      <div class="text-center md:text-left">
+        <h4 class="font-black text-2xl tracking-tighter">
+          HULT PRIZE <span class="text-hult-magenta">UNI</span>
+        </h4>
+        <p class="text-gray-500 text-sm mt-2">
+          © 2026 Hult Prize at UNI. All rights reserved.
+        </p>
+      </div>
+      <div class="flex gap-6">
+        <a href="#" class="text-gray-400 hover:text-white transition-colors"
+          >Instagram</a
+        >
+        <a href="#" class="text-gray-400 hover:text-white transition-colors"
+          >LinkedIn</a
+        >
+        <a href="#" class="text-gray-400 hover:text-white transition-colors"
+          >Facebook</a
+        >
+      </div>
+    </div>
+  </footer>
+</Layout>

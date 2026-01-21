@@ -20,12 +20,12 @@ import Layout from "../layouts/Layout.astro";
 					>Inicio</a
 				>
 				<a
-					href="#nosotros"
+					href="/nosotros"
 					class="text-sm font-medium hover:text-hult-magenta transition-colors"
 					>Nosotros</a
 				>
 				<a
-					href="#cronograma"
+					href="/cronograma"
 					class="text-sm font-medium hover:text-hult-magenta transition-colors"
 					>Cronograma</a
 				>
@@ -149,8 +149,14 @@ import Layout from "../layouts/Layout.astro";
 			</div>
 		</section>
 
-		<!-- About Section -->
-		<section id="nosotros" class="py-24 relative overflow-hidden">
+		<!-- About Section & Teams Preview -->
+		<section id="nosotros" class="py-24 relative overflow-hidden bg-hult-black">
+			<!-- Background Elements -->
+			<div
+				class="absolute top-0 right-0 w-1/3 h-full bg-linear-to-l from-hult-magenta/5 to-transparent pointer-events-none"
+			>
+			</div>
+
 			<div class="container mx-auto px-6">
 				<div class="grid md:grid-cols-2 gap-16 items-center">
 					<div class="relative">
@@ -158,7 +164,6 @@ import Layout from "../layouts/Layout.astro";
 							class="absolute -inset-4 bg-hult-magenta/30 rounded-2xl blur-xl rotate-3"
 						>
 						</div>
-						<!-- Placeholder for an image provided by user later or generated -->
 						<div
 							class="relative bg-neutral-900 rounded-2xl overflow-hidden aspect-video border border-white/10 flex items-center justify-center group"
 						>
@@ -166,49 +171,105 @@ import Layout from "../layouts/Layout.astro";
 								class="text-6xl group-hover:scale-110 transition-transform duration-500"
 								>🎓</span
 							>
-							<!-- You would replace this with an actual image -->
 						</div>
 					</div>
 					<div>
 						<h2
 							class="text-hult-magenta font-bold tracking-widest uppercase mb-4 text-sm"
 						>
-							¿Qué es Hult Prize?
+							Organización
 						</h2>
-						<h3 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-							Liderando una generación para cambiar el mundo.
+						<h3
+							class="text-4xl md:text-5xl font-black mb-6 leading-tight text-white"
+						>
+							Conoce al Equipo <br />
+							<span class="text-hult-magenta">Hulty 2026</span>
 						</h3>
-						<p class="text-gray-300 text-lg leading-relaxed mb-6">
-							El Hult Prize desafía a los jóvenes a resolver los problemas más
-							apremiantes del mundo a través del emprendimiento social. Cada
-							año, un desafío inspira a estudiantes de más de 120 países a crear
-							ideas que generen impacto.
+						<p class="text-gray-300 text-lg leading-relaxed mb-8">
+							Detrás del evento de emprendimiento social más grande de la UNI,
+							hay un equipo apasionado de líderes estudiantiles trabajando en
+							Partnership, Marketing, Logística y Gestión de Talento para
+							hacerlo realidad.
 						</p>
-						<ul class="space-y-4 mb-8">
-							<li class="flex items-center gap-3">
-								<span
-									class="w-6 h-6 rounded-full bg-hult-magenta/20 flex items-center justify-center text-hult-magenta font-bold text-xs"
-									>✓</span
-								>
-								<span class="text-gray-300">Mentoria de clase mundial</span>
-							</li>
-							<li class="flex items-center gap-3">
-								<span
-									class="w-6 h-6 rounded-full bg-hult-magenta/20 flex items-center justify-center text-hult-magenta font-bold text-xs"
-									>✓</span
-								>
-								<span class="text-gray-300">Networking Global</span>
-							</li>
-							<li class="flex items-center gap-3">
-								<span
-									class="w-6 h-6 rounded-full bg-hult-magenta/20 flex items-center justify-center text-hult-magenta font-bold text-xs"
-									>✓</span
-								>
-								<span class="text-gray-300">Entrenamiento intensivo</span>
-							</li>
-						</ul>
+
+						<a
+							href="/nosotros"
+							class="inline-flex items-center gap-2 text-white font-bold hover:text-hult-magenta transition-colors group"
+						>
+							Ver a todos los equipos
+							<span class="group-hover:translate-x-1 transition-transform"
+								>→</span
+							>
+						</a>
 					</div>
 				</div>
+			</div>
+		</section>
+
+		<!-- Timeline Section Preview -->
+		<section
+			id="cronograma"
+			class="py-24 relative overflow-hidden border-t border-white/5"
+		>
+			<div class="container mx-auto px-6 text-center">
+				<h2
+					class="text-hult-magenta font-bold tracking-widest uppercase mb-4 text-sm"
+				>
+					Etapas
+				</h2>
+				<h3 class="text-4xl md:text-5xl font-black mb-12 text-white">
+					Un Viaje de <span class="text-hult-magenta">4 Etapas</span>
+				</h3>
+
+				<div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+					<div
+						class="p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all group"
+					>
+						<span
+							class="text-4xl font-black text-white/10 block mb-2 group-hover:text-hult-magenta/20 transition-colors"
+							>01</span
+						>
+						<h4 class="text-xl font-bold text-white mb-1">Convocatoria</h4>
+						<p class="text-sm text-gray-400">Enero - Febrero</p>
+					</div>
+					<div
+						class="p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all group"
+					>
+						<span
+							class="text-4xl font-black text-white/10 block mb-2 group-hover:text-hult-magenta/20 transition-colors"
+							>02</span
+						>
+						<h4 class="text-xl font-bold text-white mb-1">Bootcamp</h4>
+						<p class="text-sm text-gray-400">Marzo</p>
+					</div>
+					<div
+						class="p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all group"
+					>
+						<span
+							class="text-4xl font-black text-white/10 block mb-2 group-hover:text-hult-magenta/20 transition-colors"
+							>03</span
+						>
+						<h4 class="text-xl font-bold text-white mb-1">Semifinales</h4>
+						<p class="text-sm text-gray-400">Abril</p>
+					</div>
+					<div
+						class="p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all group"
+					>
+						<span
+							class="text-4xl font-black text-white/10 block mb-2 group-hover:text-hult-magenta/20 transition-colors"
+							>04</span
+						>
+						<h4 class="text-xl font-bold text-white mb-1">Gran Final</h4>
+						<p class="text-sm text-gray-400">Mayo</p>
+					</div>
+				</div>
+
+				<a
+					href="/cronograma"
+					class="px-8 py-3.5 border border-hult-magenta text-hult-magenta font-bold rounded-full hover:bg-hult-magenta hover:text-white transition-all shadow-[0_0_15px_rgba(233,30,140,0.2)] hover:shadow-[0_0_25px_rgba(233,30,140,0.4)]"
+				>
+					Ver Cronograma Detallado
+				</a>
 			</div>
 		</section>
 
