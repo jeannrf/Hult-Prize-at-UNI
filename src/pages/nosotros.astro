@@ -69,8 +69,44 @@ import Layout from "../layouts/Layout.astro";
     <!-- Teams Grid -->
     <section class="pb-24 relative">
       <div class="container mx-auto px-6">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-          <!-- Team Item: Dirección & Partnership -->
+        <!-- Director General -->
+        <div class="flex justify-center mb-16">
+          <a
+            href="https://www.linkedin.com/in/saul-canturin-159a32187/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w-full max-w-sm group relative bg-white border border-white/10 rounded-3xl overflow-hidden hover:border-hult-magenta/50 transition-all duration-300 transform hover:-translate-y-2 block"
+          >
+            <!-- Image Container -->
+            <div class="aspect-[4/5] bg-neutral-800 relative overflow-hidden">
+              <!-- Placeholder for Profile Image -->
+              <div
+                class="absolute inset-0 flex items-center justify-center text-neutral-600 group-hover:scale-105 transition-transform duration-700 bg-neutral-200"
+              >
+                <span class="text-8xl">👔</span>
+              </div>
+            </div>
+
+            <!-- Text Content -->
+            <div class="p-8 bg-white text-left">
+              <h4
+                class="text-3xl font-black text-[#1A1A1A] mb-2 group-hover:text-hult-magenta transition-colors"
+              >
+                Saúl Canturín
+              </h4>
+              <p class="text-hult-magenta font-bold text-lg mb-2">
+                Campus Director en Hult Prize at UNI
+              </p>
+              <p class="text-gray-500 font-medium text-base">
+                Ingeniería Económica
+              </p>
+            </div>
+          </a>
+        </div>
+
+        <!-- Áreas: Partnership, Marketing, Eventos -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Partnership -->
           <article
             class="group relative bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-hult-magenta/50 transition-colors duration-300"
           >
@@ -85,48 +121,35 @@ import Layout from "../layouts/Layout.astro";
               >
               </div>
               <div class="absolute bottom-6 left-8">
-                <h4 class="text-3xl font-black text-white">
-                  Partnership & Dirección
-                </h4>
+                <h4 class="text-2xl font-black text-white">Partnership</h4>
               </div>
             </div>
-            <div class="p-8">
-              <p class="text-gray-300 mb-8 text-base leading-relaxed">
-                Encargados de forjar alianzas estratégicas y dirigir la visión
-                general del evento, conectando con mentores, jueces y
-                patrocinadores para potenciar el impacto.
+            <div class="p-6">
+              <p class="text-gray-300 mb-6 text-sm leading-relaxed">
+                Encargados de forjar alianzas estratégicas, conectando con
+                mentores, jueces y patrocinadores para potenciar el impacto.
               </p>
-              <div class="border-t border-white/10 pt-6">
+              <div class="border-t border-white/10 pt-4">
                 <h5
-                  class="text-hult-magenta text-xs font-bold uppercase tracking-wider mb-4 flex items-center gap-2"
+                  class="text-hult-magenta text-[10px] font-bold uppercase tracking-wider mb-3 flex items-center gap-2"
                 >
-                  <span class="w-2 h-2 rounded-full bg-hult-magenta"></span> Integrantes
+                  <span class="w-1.5 h-1.5 rounded-full bg-hult-magenta"></span> Equipo
                 </h5>
-                <ul
-                  class="grid grid-cols-1 sm:grid-cols-2 gap-y-2 gap-x-4 text-sm text-white/80"
-                >
+                <ul class="space-y-2 text-sm text-white/80">
                   <li class="flex items-center gap-2">
-                    <span class="w-1 h-1 rounded-full bg-white/30"></span> Nombre
-                    Apellido
+                    <span class="w-1 h-1 rounded-full bg-white/30"></span> Miembro
+                    Equipo
                   </li>
                   <li class="flex items-center gap-2">
-                    <span class="w-1 h-1 rounded-full bg-white/30"></span> Nombre
-                    Apellido
-                  </li>
-                  <li class="flex items-center gap-2">
-                    <span class="w-1 h-1 rounded-full bg-white/30"></span> Nombre
-                    Apellido
-                  </li>
-                  <li class="flex items-center gap-2">
-                    <span class="w-1 h-1 rounded-full bg-white/30"></span> Nombre
-                    Apellido
+                    <span class="w-1 h-1 rounded-full bg-white/30"></span> Miembro
+                    Equipo
                   </li>
                 </ul>
               </div>
             </div>
           </article>
 
-          <!-- Team Item: Marketing -->
+          <!-- Marketing -->
           <article
             class="group relative bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-hult-magenta/50 transition-colors duration-300"
           >
@@ -141,48 +164,35 @@ import Layout from "../layouts/Layout.astro";
               >
               </div>
               <div class="absolute bottom-6 left-8">
-                <h4 class="text-3xl font-black text-white">
-                  Marketing & Comunicaciones
-                </h4>
+                <h4 class="text-2xl font-black text-white">Marketing</h4>
               </div>
             </div>
-            <div class="p-8">
-              <p class="text-gray-300 mb-8 text-base leading-relaxed">
-                La voz de Hult Prize. Gestionan la marca, redes sociales, diseño
-                gráfico y campañas creativas para inspirar a toda la comunidad
-                universitaria.
+            <div class="p-6">
+              <p class="text-gray-300 mb-6 text-sm leading-relaxed">
+                La voz de Hult Prize. Gestión de marca, redes sociales y
+                campañas creativas para inspirar a toda la comunidad.
               </p>
-              <div class="border-t border-white/10 pt-6">
+              <div class="border-t border-white/10 pt-4">
                 <h5
-                  class="text-hult-magenta text-xs font-bold uppercase tracking-wider mb-4 flex items-center gap-2"
+                  class="text-hult-magenta text-[10px] font-bold uppercase tracking-wider mb-3 flex items-center gap-2"
                 >
-                  <span class="w-2 h-2 rounded-full bg-hult-magenta"></span> Integrantes
+                  <span class="w-1.5 h-1.5 rounded-full bg-hult-magenta"></span> Equipo
                 </h5>
-                <ul
-                  class="grid grid-cols-1 sm:grid-cols-2 gap-y-2 gap-x-4 text-sm text-white/80"
-                >
+                <ul class="space-y-2 text-sm text-white/80">
                   <li class="flex items-center gap-2">
-                    <span class="w-1 h-1 rounded-full bg-white/30"></span> Nombre
-                    Apellido
+                    <span class="w-1 h-1 rounded-full bg-white/30"></span> Miembro
+                    Equipo
                   </li>
                   <li class="flex items-center gap-2">
-                    <span class="w-1 h-1 rounded-full bg-white/30"></span> Nombre
-                    Apellido
-                  </li>
-                  <li class="flex items-center gap-2">
-                    <span class="w-1 h-1 rounded-full bg-white/30"></span> Nombre
-                    Apellido
-                  </li>
-                  <li class="flex items-center gap-2">
-                    <span class="w-1 h-1 rounded-full bg-white/30"></span> Nombre
-                    Apellido
+                    <span class="w-1 h-1 rounded-full bg-white/30"></span> Miembro
+                    Equipo
                   </li>
                 </ul>
               </div>
             </div>
           </article>
 
-          <!-- Team Item: Logística -->
+          <!-- Eventos -->
           <article
             class="group relative bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-hult-magenta/50 transition-colors duration-300"
           >
@@ -190,104 +200,35 @@ import Layout from "../layouts/Layout.astro";
               <div
                 class="absolute inset-0 flex items-center justify-center text-neutral-600 group-hover:scale-105 transition-transform duration-700"
               >
-                <span class="text-7xl">⚙️</span>
+                <span class="text-7xl">🎉</span>
               </div>
               <div
                 class="absolute inset-0 bg-linear-to-t from-hult-black/90 via-transparent to-transparent"
               >
               </div>
               <div class="absolute bottom-6 left-8">
-                <h4 class="text-3xl font-black text-white">
-                  Logística & Operaciones
-                </h4>
+                <h4 class="text-2xl font-black text-white">Eventos</h4>
               </div>
             </div>
-            <div class="p-8">
-              <p class="text-gray-300 mb-8 text-base leading-relaxed">
-                El motor del evento. Aseguran que cada detalle técnico, espacio
-                físico o virtual y recurso necesario esté listo para una
-                experiencia impecable.
+            <div class="p-6">
+              <p class="text-gray-300 mb-6 text-sm leading-relaxed">
+                Creadores de experiencias. Organizan y ejecutan cada actividad,
+                asegurando que la logística y el ambiente sean impecables.
               </p>
-              <div class="border-t border-white/10 pt-6">
+              <div class="border-t border-white/10 pt-4">
                 <h5
-                  class="text-hult-magenta text-xs font-bold uppercase tracking-wider mb-4 flex items-center gap-2"
+                  class="text-hult-magenta text-[10px] font-bold uppercase tracking-wider mb-3 flex items-center gap-2"
                 >
-                  <span class="w-2 h-2 rounded-full bg-hult-magenta"></span> Integrantes
+                  <span class="w-1.5 h-1.5 rounded-full bg-hult-magenta"></span> Equipo
                 </h5>
-                <ul
-                  class="grid grid-cols-1 sm:grid-cols-2 gap-y-2 gap-x-4 text-sm text-white/80"
-                >
+                <ul class="space-y-2 text-sm text-white/80">
                   <li class="flex items-center gap-2">
-                    <span class="w-1 h-1 rounded-full bg-white/30"></span> Nombre
-                    Apellido
+                    <span class="w-1 h-1 rounded-full bg-white/30"></span> Miembro
+                    Equipo
                   </li>
                   <li class="flex items-center gap-2">
-                    <span class="w-1 h-1 rounded-full bg-white/30"></span> Nombre
-                    Apellido
-                  </li>
-                  <li class="flex items-center gap-2">
-                    <span class="w-1 h-1 rounded-full bg-white/30"></span> Nombre
-                    Apellido
-                  </li>
-                  <li class="flex items-center gap-2">
-                    <span class="w-1 h-1 rounded-full bg-white/30"></span> Nombre
-                    Apellido
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </article>
-
-          <!-- Team Item: Gestión de Talento -->
-          <article
-            class="group relative bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-hult-magenta/50 transition-colors duration-300"
-          >
-            <div class="aspect-video bg-neutral-800 relative overflow-hidden">
-              <div
-                class="absolute inset-0 flex items-center justify-center text-neutral-600 group-hover:scale-105 transition-transform duration-700"
-              >
-                <span class="text-7xl">👥</span>
-              </div>
-              <div
-                class="absolute inset-0 bg-linear-to-t from-hult-black/90 via-transparent to-transparent"
-              >
-              </div>
-              <div class="absolute bottom-6 left-8">
-                <h4 class="text-3xl font-black text-white">
-                  Community & Talent
-                </h4>
-              </div>
-            </div>
-            <div class="p-8">
-              <p class="text-gray-300 mb-8 text-base leading-relaxed">
-                Responsables de la experiencia única de los participantes
-                (competitors journey), reclutamiento de voluntarios y el
-                bienestar general del equipo organizador.
-              </p>
-              <div class="border-t border-white/10 pt-6">
-                <h5
-                  class="text-hult-magenta text-xs font-bold uppercase tracking-wider mb-4 flex items-center gap-2"
-                >
-                  <span class="w-2 h-2 rounded-full bg-hult-magenta"></span> Integrantes
-                </h5>
-                <ul
-                  class="grid grid-cols-1 sm:grid-cols-2 gap-y-2 gap-x-4 text-sm text-white/80"
-                >
-                  <li class="flex items-center gap-2">
-                    <span class="w-1 h-1 rounded-full bg-white/30"></span> Nombre
-                    Apellido
-                  </li>
-                  <li class="flex items-center gap-2">
-                    <span class="w-1 h-1 rounded-full bg-white/30"></span> Nombre
-                    Apellido
-                  </li>
-                  <li class="flex items-center gap-2">
-                    <span class="w-1 h-1 rounded-full bg-white/30"></span> Nombre
-                    Apellido
-                  </li>
-                  <li class="flex items-center gap-2">
-                    <span class="w-1 h-1 rounded-full bg-white/30"></span> Nombre
-                    Apellido
+                    <span class="w-1 h-1 rounded-full bg-white/30"></span> Miembro
+                    Equipo
                   </li>
                 </ul>
               </div>
