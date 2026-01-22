@@ -101,7 +101,7 @@ import Navbar from "../components/Navbar.astro";
 				<div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
 					<div>
 						<span class="block text-4xl md:text-5xl font-black text-white mb-2"
-							>120+</span
+							>130+</span
 						>
 						<span class="text-sm text-gray-400 uppercase tracking-widest"
 							>Países</span
@@ -109,10 +109,10 @@ import Navbar from "../components/Navbar.astro";
 					</div>
 					<div>
 						<span class="block text-4xl md:text-5xl font-black text-white mb-2"
-							>3000+</span
+							>200k+</span
 						>
 						<span class="text-sm text-gray-400 uppercase tracking-widest"
-							>Universidades</span
+							>Participantes anuales</span
 						>
 					</div>
 					<div>
@@ -153,10 +153,20 @@ import Navbar from "../components/Navbar.astro";
 						<div
 							class="relative bg-neutral-900 rounded-2xl overflow-hidden aspect-video border border-white/10 flex items-center justify-center group"
 						>
-							<span
-								class="text-6xl group-hover:scale-110 transition-transform duration-500"
-								>🎓</span
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke-width="1.5"
+								stroke="currentColor"
+								class="w-20 h-20 text-white group-hover:scale-110 group-hover:text-hult-magenta transition-all duration-500"
 							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.499 5.24 50.552 50.552 0 00-2.658.813m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5"
+								></path>
+							</svg>
 						</div>
 					</div>
 					<div>
@@ -184,9 +194,19 @@ import Navbar from "../components/Navbar.astro";
 							class="inline-flex items-center gap-2 text-white font-bold hover:text-hult-magenta transition-colors group"
 						>
 							Ver a todos los equipos
-							<span class="group-hover:translate-x-1 transition-transform"
-								>→</span
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke-width="2"
+								stroke="currentColor"
+								class="w-4 h-4 group-hover:translate-x-1 transition-transform"
 							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path>
+							</svg>
 						</a>
 					</div>
 				</div>
@@ -333,31 +353,4 @@ import Navbar from "../components/Navbar.astro";
 			</div>
 		</section>
 	</main>
-
-	<footer class="py-12 border-t border-white/10 bg-black/40">
-		<div
-			class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6"
-		>
-			<div class="text-center md:text-left">
-				<h4 class="font-black text-2xl tracking-tighter">
-					HULT PRIZE <span class="text-hult-magenta">UNI</span>
-				</h4>
-				<p class="text-gray-500 text-sm mt-2">
-					© 2026 Hult Prize at UNI. All rights reserved.
-				</p>
-			</div>
-			<div class="flex gap-6">
-				<a
-					href="https://www.linkedin.com/company/hult-prize-at-uni/posts/?feedView=all"
-					target="_blank"
-					class="text-gray-400 hover:text-white transition-colors">LinkedIn</a
-				>
-				<a
-					href="https://www.facebook.com/profile.php?id=61570961537370"
-					target="_blank"
-					class="text-gray-400 hover:text-white transition-colors">Facebook</a
-				>
-			</div>
-		</div>
-	</footer>
 </Layout>

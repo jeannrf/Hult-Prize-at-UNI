@@ -1,6 +1,8 @@
 ---
 import "../styles/global.css";
 
+import Footer from "../components/Footer.astro"; // Import Footer
+
 interface Props {
   title: string;
 }
@@ -37,5 +39,6 @@ const { title } = Astro.props;
     </div>
 
     <slot />
+    <Footer />
   </body>
 </html>
