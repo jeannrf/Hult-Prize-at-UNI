@@ -40,13 +40,21 @@ const carouselMembers = [...teamMembers, ...teamMembers, ...teamMembers];
   <!-- Navbar (Misma que en home pero con rutas relativas) -->
   <Navbar />
 
-  <main class="pt-24">
+  <!-- Fondo Estático Global (Fixed) - Sin Destellos -->
+  <div class="fixed inset-0 z-0 pointer-events-none">
+    <!-- Capa Base Sólida -->
+    <div class="absolute inset-0 bg-hult-black"></div>
+
+    <!-- Degradado Sutil General -->
+    <div
+      class="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(233,30,140,0.15)_0%,_transparent_80%)]"
+    >
+    </div>
+  </div>
+
+  <main class="relative z-10 pt-24">
     <!-- Header Page -->
     <section class="relative py-20 overflow-hidden">
-      <div
-        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-hult-magenta/10 rounded-full blur-[120px] -z-10"
-      >
-      </div>
       <div class="container mx-auto px-6 text-center">
         <h1 class="text-5xl md:text-7xl font-black mb-6">
           Nuestro <span class="text-hult-magenta">Equipo</span>
@@ -350,14 +358,15 @@ const carouselMembers = [...teamMembers, ...teamMembers, ...teamMembers];
         </p>
       </div>
       <div class="flex gap-6">
-        <a href="#" class="text-gray-400 hover:text-white transition-colors"
-          >Instagram</a
+        <a
+          href="https://www.linkedin.com/company/hult-prize-at-uni/posts/?feedView=all"
+          target="_blank"
+          class="text-gray-400 hover:text-white transition-colors">LinkedIn</a
         >
-        <a href="#" class="text-gray-400 hover:text-white transition-colors"
-          >LinkedIn</a
-        >
-        <a href="#" class="text-gray-400 hover:text-white transition-colors"
-          >Facebook</a
+        <a
+          href="https://www.facebook.com/profile.php?id=61570961537370"
+          target="_blank"
+          class="text-gray-400 hover:text-white transition-colors">Facebook</a
         >
       </div>
     </div>

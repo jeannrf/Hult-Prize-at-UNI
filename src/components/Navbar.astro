@@ -35,9 +35,14 @@ const pathname = new URL(Astro.request.url).pathname;
         class={`text-sm font-medium transition-colors ${pathname.startsWith("/impacto") ? "text-hult-magenta" : "text-white hover:text-hult-magenta"}`}
         >Impacto</a
       >
+      <a
+        href="/#mentores"
+        class="text-sm font-medium text-white hover:text-hult-magenta transition-colors"
+        >Mentores</a
+      >
     </nav>
     <a
-      href="https://forms.gle/TU-LINK-AQUI"
+      href="https://docs.google.com/forms/d/e/1FAIpQLScj15fWnJ35oLOlqTxl-xF5JCh2iz_nIIOjF1M4KkYOHS-p8A/viewform"
       target="_blank"
       class="px-6 py-2.5 bg-hult-magenta hover:bg-hult-magenta-dark text-white font-bold rounded-full transition-all text-sm shadow-[0_0_20px_rgba(233,30,140,0.5)] hover:shadow-[0_0_30px_rgba(233,30,140,0.7)]"
     >
