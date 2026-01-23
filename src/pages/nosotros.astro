@@ -9,27 +9,32 @@ const teamMembers = [
     career: "Ingeniería Económica",
     image: "/saul-canturin.png",
     linkedin: "https://www.linkedin.com/in/saul-canturin-159a32187/",
+    area: "liderazgo",
   },
   {
-    name: "Ana García",
-    role: "Head of Operations",
-    career: "Ingeniería Industrial",
-    image: "/member-placeholder.png",
-    linkedin: "#",
+    name: "Jeanpier Robles",
+    role: "Partnership Team",
+    career: "Ingeniería de Software",
+    image: "/jeanpier-robles.png",
+    linkedin: "https://www.linkedin.com/in/jeanpier-robles/",
+    area: "partnership",
   },
   {
-    name: "Carlos López",
-    role: "Finance Manager",
+    name: "Renato Gutiérrez",
+    role: "Partnership Team",
     career: "Ingeniería de Sistemas",
-    image: "/member-placeholder.png",
-    linkedin: "#",
+    image: "/renato-gutierrez.png",
+    linkedin: "https://www.linkedin.com/in/renato-gutierrez/",
+    area: "partnership",
   },
   {
-    name: "María Rodríguez",
-    role: "Startups Coordinator",
-    career: "Arquitectura",
-    image: "/member-placeholder.png",
-    linkedin: "#",
+    name: "Lindher Cardenas",
+    role: "Partnership Team",
+    career: "Ingeniería de Telecomunicaciones",
+    image: "/lindher-cardenas.png",
+    linkedin:
+      "https://www.linkedin.com/in/napoleon-lindher-cardenas-sanchez-871952258/",
+    area: "partnership",
   },
 ];
 
@@ -70,7 +75,7 @@ const carouselMembers = [...teamMembers, ...teamMembers, ...teamMembers];
     <section class="pb-24 relative">
       <div class="container mx-auto px-6">
         <!-- Liderazgo (Carousel) -->
-        <div class="mb-16 max-w-5xl mx-auto relative group">
+        <div class="mb-16 max-w-5xl mx-auto relative">
           <button
             id="carousel-prev"
             class="absolute left-2 md:-left-16 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full bg-hult-black/50 text-white hover:bg-hult-magenta hover:scale-110 transition-all backdrop-blur-sm shadow-lg cursor-pointer hidden md:block"
@@ -125,6 +130,7 @@ const carouselMembers = [...teamMembers, ...teamMembers, ...teamMembers];
                   draggable="false"
                   class="snap-center shrink-0 w-[75%] sm:w-[calc(50%-16px)] md:w-[calc(33.333%-22px)] group relative bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-hult-magenta/50 transition-all duration-300 transform hover:-translate-y-2 block select-none"
                   data-index={index}
+                  data-area={member.area}
                 >
                   <div class="aspect-[4/5] bg-neutral-800 relative overflow-hidden pointer-events-none">
                     <img
@@ -164,20 +170,25 @@ const carouselMembers = [...teamMembers, ...teamMembers, ...teamMembers];
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           <!-- Partnership -->
           <article
-            class="group relative bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-hult-magenta/50 transition-colors duration-300"
+            id="area-partnership"
+            class="group relative bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-hult-magenta/50 [&.is-active]:border-hult-magenta/50 transition-colors duration-300"
           >
             <div class="aspect-video bg-neutral-800 relative overflow-hidden">
               <img
                 src="/partnership.jpg"
                 alt="Partnership"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                class="w-full h-full object-cover group-hover:scale-105 group-[.is-active]:scale-105 transition-transform duration-700"
               />
               <div
                 class="absolute inset-0 bg-linear-to-t from-hult-black/90 via-transparent to-transparent"
               >
               </div>
               <div class="absolute bottom-6 left-8">
-                <h4 class="text-2xl font-black text-white">Partnership</h4>
+                <h4
+                  class="text-2xl font-black text-white group-hover:text-hult-magenta group-[.is-active]:text-hult-magenta transition-colors"
+                >
+                  Partnership
+                </h4>
               </div>
             </div>
             <div class="p-6">
@@ -193,12 +204,34 @@ const carouselMembers = [...teamMembers, ...teamMembers, ...teamMembers];
                 </h5>
                 <ul class="space-y-2 text-sm text-white/80">
                   <li class="flex items-center gap-2">
-                    <span class="w-1 h-1 rounded-full bg-white/30"></span> Miembro
-                    Equipo
+                    <span class="w-1 h-1 rounded-full bg-white/30"></span>
+                    <a
+                      href="https://www.linkedin.com/in/jeanpier-robles/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="hover:text-hult-magenta transition-colors"
+                      >Robles Fabian Jeanpier Alexander</a
+                    >
                   </li>
                   <li class="flex items-center gap-2">
-                    <span class="w-1 h-1 rounded-full bg-white/30"></span> Miembro
-                    Equipo
+                    <span class="w-1 h-1 rounded-full bg-white/30"></span>
+                    <a
+                      href="https://www.linkedin.com/in/renato-gutierrez/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="hover:text-hult-magenta transition-colors"
+                      >Renato Gutiérrez Serra</a
+                    >
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="w-1 h-1 rounded-full bg-white/30"></span>
+                    <a
+                      href="https://www.linkedin.com/in/napoleon-lindher-cardenas-sanchez-871952258/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="hover:text-hult-magenta transition-colors"
+                      >Napoleon Lindher Cardenas Sanchez</a
+                    >
                   </li>
                 </ul>
               </div>
@@ -207,20 +240,25 @@ const carouselMembers = [...teamMembers, ...teamMembers, ...teamMembers];
 
           <!-- Marketing -->
           <article
-            class="group relative bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-hult-magenta/50 transition-colors duration-300"
+            id="area-marketing"
+            class="group relative bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-hult-magenta/50 [&.is-active]:border-hult-magenta/50 transition-colors duration-300"
           >
             <div class="aspect-video bg-neutral-800 relative overflow-hidden">
               <img
                 src="/marketing.png"
                 alt="Marketing"
-                class="w-full h-full object-cover scale-110 group-hover:scale-125 transition-transform duration-700"
+                class="w-full h-full object-cover scale-110 group-hover:scale-125 group-[.is-active]:scale-125 transition-transform duration-700"
               />
               <div
                 class="absolute inset-0 bg-linear-to-t from-hult-black/90 via-transparent to-transparent"
               >
               </div>
               <div class="absolute bottom-6 left-8">
-                <h4 class="text-2xl font-black text-white">Marketing</h4>
+                <h4
+                  class="text-2xl font-black text-white group-hover:text-hult-magenta group-[.is-active]:text-hult-magenta transition-colors"
+                >
+                  Marketing
+                </h4>
               </div>
             </div>
             <div class="p-6">
@@ -250,20 +288,25 @@ const carouselMembers = [...teamMembers, ...teamMembers, ...teamMembers];
 
           <!-- Eventos -->
           <article
-            class="group relative bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-hult-magenta/50 transition-colors duration-300"
+            id="area-eventos"
+            class="group relative bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-hult-magenta/50 [&.is-active]:border-hult-magenta/50 transition-colors duration-300"
           >
             <div class="aspect-video bg-neutral-800 relative overflow-hidden">
               <img
                 src="/eventos.jpg"
                 alt="Eventos"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                class="w-full h-full object-cover group-hover:scale-105 group-[.is-active]:scale-105 transition-transform duration-700"
               />
               <div
                 class="absolute inset-0 bg-linear-to-t from-hult-black/90 via-transparent to-transparent"
               >
               </div>
               <div class="absolute bottom-6 left-8">
-                <h4 class="text-2xl font-black text-white">Eventos</h4>
+                <h4
+                  class="text-2xl font-black text-white group-hover:text-hult-magenta group-[.is-active]:text-hult-magenta transition-colors"
+                >
+                  Eventos
+                </h4>
               </div>
             </div>
             <div class="p-6">
@@ -348,6 +391,30 @@ const carouselMembers = [...teamMembers, ...teamMembers, ...teamMembers];
 
 <script>
   const carousel = document.getElementById("team-carousel");
+
+  // Highlight logic for members and areas
+  const memberCards = document.querySelectorAll("[data-area]");
+  memberCards.forEach((card) => {
+    card.addEventListener("mouseenter", () => {
+      const areaKey = card.getAttribute("data-area");
+      if (areaKey) {
+        const targetArea = document.getElementById(`area-${areaKey}`);
+        if (targetArea) {
+          targetArea.classList.add("is-active");
+        }
+      }
+    });
+
+    card.addEventListener("mouseleave", () => {
+      const areaKey = card.getAttribute("data-area");
+      if (areaKey) {
+        const targetArea = document.getElementById(`area-${areaKey}`);
+        if (targetArea) {
+          targetArea.classList.remove("is-active");
+        }
+      }
+    });
+  });
 
   if (carousel) {
     const checkScroll = () => {
