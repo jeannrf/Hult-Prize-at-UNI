@@ -7,17 +7,19 @@ const pathname = new URL(Astro.request.url).pathname;
   class="fixed top-0 w-full z-50 bg-hult-black/50 backdrop-blur-md border-b border-white/10 transition-all duration-300"
 >
   <div class="container mx-auto px-6 h-20 flex items-center justify-between">
-    <div class="flex items-center gap-2">
-      <a
-        href="/"
-        class="text-xl md:text-2xl font-black tracking-tighter text-white hover:text-hult-magenta transition-colors wrap-break-word flex flex-col md:block"
-      >
-        HULT PRIZE <span class="text-hult-magenta">UNI</span>
+    <!-- Left: Logo -->
+    <div class="flex-1 flex justify-start items-center gap-2">
+      <a href="/" class="block hover:opacity-80 transition-opacity">
+        <img
+          src="/logos/hult-logo-white.png"
+          alt="Hult Prize Logo"
+          class="h-14 md:h-16 w-auto object-contain"
+        />
       </a>
     </div>
 
-    <!-- Desktop Nav -->
-    <nav class="hidden lg:flex gap-8 items-center">
+    <!-- Center: Nav Links -->
+    <nav class="hidden lg:flex items-center gap-8 justify-center">
       <a
         href="/"
         class={`text-sm font-medium transition-colors ${pathname === "/" ? "text-hult-magenta" : "text-white hover:text-hult-magenta"}`}
@@ -45,7 +47,8 @@ const pathname = new URL(Astro.request.url).pathname;
       >
     </nav>
 
-    <div class="flex items-center gap-4">
+    <!-- Right: Action Button & Mobile Toggle -->
+    <div class="flex-1 flex justify-end items-center gap-4">
       <a
         href="https://docs.google.com/forms/d/e/1FAIpQLScj15fWnJ35oLOlqTxl-xF5JCh2iz_nIIOjF1M4KkYOHS-p8A/viewform"
         target="_blank"
