@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
 ---
 
 <Layout title="Hult Prize at UNI 2026 - Official Landing Page">
@@ -11,13 +12,9 @@ import Layout from "../layouts/Layout.astro";
 			class="container mx-auto px-6 h-20 flex items-center justify-between"
 		>
 			<div class="flex items-center gap-2">
-				<a href="/" class="block">
-					<img
-						src="/logos/hult-prize-logo.png"
-						alt="Hult Prize UNI"
-						class="h-14 md:h-20 w-auto object-contain"
-					/>
-				</a>
+				<span class="text-2xl font-black tracking-tighter text-white">
+					HULT PRIZE <span class="text-hult-magenta">UNI</span>
+				</span>
 			</div>
 			<nav class="hidden md:flex gap-8 items-center">
 				<a
@@ -125,7 +122,7 @@ import Layout from "../layouts/Layout.astro";
 					class="flex flex-col sm:flex-row gap-6 justify-center items-center"
 				>
 					<a
-						href="https://forms.gle/TU-LINK-AQUI"
+						href="https://docs.google.com/forms/d/e/1FAIpQLScj15fWnJ35oLOlqTxl-xF5JCh2iz_nIIOjF1M4KkYOHS-p8A/viewform"
 						class="px-10 py-4 bg-hult-magenta text-white font-black rounded-full shadow-[0_0_20px_rgba(233,30,140,0.4)] hover:shadow-[0_0_30px_rgba(233,30,140,0.6)] hover:scale-105 transition-all w-full sm:w-auto text-lg text-center uppercase tracking-tight"
 					>
 						Inscribir mi equipo
@@ -142,14 +139,14 @@ import Layout from "../layouts/Layout.astro";
 
 		<!-- Stats Section -->
 		<section
-			class="py-12 border-y border-white/5 bg-[#1A1A1A]/95 backdrop-blur-md"
+			class="py-12 border-y border-white/5 backdrop-blur-sm bg-black/20"
 		>
 			<div class="container mx-auto px-6">
 				<div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
 					<div>
 						<span
 							class="block text-4xl md:text-5xl font-black text-white mb-2"
-							>120+</span
+							>130+</span
 						>
 						<span
 							class="text-sm text-gray-400 uppercase tracking-widest"
@@ -159,11 +156,11 @@ import Layout from "../layouts/Layout.astro";
 					<div>
 						<span
 							class="block text-4xl md:text-5xl font-black text-white mb-2"
-							>3000+</span
+							>200k+</span
 						>
 						<span
 							class="text-sm text-gray-400 uppercase tracking-widest"
-							>Universidades</span
+							>Participantes anuales</span
 						>
 					</div>
 					<div>
@@ -191,10 +188,7 @@ import Layout from "../layouts/Layout.astro";
 		</section>
 
 		<!-- About Section & Teams Preview -->
-		<section
-			id="nosotros"
-			class="py-24 relative overflow-hidden bg-hult-black"
-		>
+		<section id="nosotros" class="py-24 relative overflow-hidden">
 			<!-- Background Elements -->
 			<div
 				class="absolute top-0 right-0 w-1/3 h-full bg-linear-to-l from-hult-magenta/5 to-transparent pointer-events-none"
@@ -211,10 +205,11 @@ import Layout from "../layouts/Layout.astro";
 						<div
 							class="relative bg-neutral-900 rounded-2xl overflow-hidden aspect-video border border-white/10 flex items-center justify-center group"
 						>
-							<span
-								class="text-6xl group-hover:scale-110 transition-transform duration-500"
-								>🎓</span
-							>
+							<img
+								src="/hult-uni-team.png"
+								alt="Hult UNI Team"
+								class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+							/>
 						</div>
 					</div>
 					<div>
@@ -242,11 +237,21 @@ import Layout from "../layouts/Layout.astro";
 							href="/nosotros"
 							class="inline-flex items-center gap-2 text-white font-bold hover:text-hult-magenta transition-colors group"
 						>
-							Ver a todos los equipos
-							<span
-								class="group-hover:translate-x-1 transition-transform"
-								>→</span
+							Ver a todo el equipo
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke-width="2"
+								stroke="currentColor"
+								class="w-4 h-4 group-hover:translate-x-1 transition-transform"
 							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+								></path>
+							</svg>
 						</a>
 					</div>
 				</div>
@@ -342,10 +347,48 @@ import Layout from "../layouts/Layout.astro";
 			</div>
 		</section>
 
-		<!-- CTA Final -->
+		<!-- Call for Mentors & Sponsors Section -->
 		<section
-			class="py-24 bg-linear-to-b from-transparent to-hult-magenta/10"
+			id="mentores"
+			class="py-24 bg-hult-black relative overflow-hidden"
 		>
+			<!-- Background Glow (Pink/Rosado Only) -->
+			<div
+				class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-[radial-gradient(circle_at_center,rgba(233,30,140,0.25)_0%,transparent_70%)] rounded-full blur-[80px] pointer-events-none"
+			>
+			</div>
+
+			<div class="container mx-auto px-6 relative z-10">
+				<div
+					class="max-w-4xl mx-auto rounded-3xl p-10 md:p-16 border border-white/10 bg-white/5 backdrop-blur-md text-center"
+				>
+					<h2 class="text-3xl md:text-5xl font-black text-white mb-6">
+						¿Quieres ser <span class="text-hult-magenta"
+							>Mentor</span
+						> o <span class="text-hult-magenta">Auspiciador?</span>
+					</h2>
+					<p
+						class="text-lg text-gray-300 mb-10 leading-relaxed max-w-2xl mx-auto"
+					>
+						Únete a nuestra red de impacto. Buscamos profesionales,
+						talleristas y empresas comprometidas que quieran
+						potenciar el talento de los estudiantes de la UNI.
+						Comparte tu experiencia o impulsa el evento como aliado
+						estratégico.
+					</p>
+					<a
+						href="https://docs.google.com/forms/d/1fU39D4fyOJwx6NuNsPg8qeeMcJhYCP3tKzQlepY6aDc/viewform?edit_requested=true"
+						target="_blank"
+						class="inline-block px-10 py-4 bg-white text-hult-black font-black text-lg rounded-full hover:bg-gray-200 hover:scale-105 transition-all shadow-[0_0_20px_rgba(255,255,255,0.2)]"
+					>
+						Postula aquí
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA Final -->
+		<section class="py-24">
 			<div class="container mx-auto px-6 text-center">
 				<h2 class="text-4xl md:text-5xl font-black mb-8">
 					¿Listo para el <span
@@ -358,7 +401,7 @@ import Layout from "../layouts/Layout.astro";
 					idea y la pasión para cambiar el mundo.
 				</p>
 				<a
-					href="https://forms.gle/TU-LINK-AQUI"
+					href="https://docs.google.com/forms/d/e/1FAIpQLScj15fWnJ35oLOlqTxl-xF5JCh2iz_nIIOjF1M4KkYOHS-p8A/viewform"
 					target="_blank"
 					class="inline-block px-10 py-5 bg-hult-magenta text-white font-black text-xl rounded-full hover:scale-105 hover:bg-hult-magenta-dark transition-all shadow-[0_0_20px_rgba(233,30,140,0.5)]"
 				>

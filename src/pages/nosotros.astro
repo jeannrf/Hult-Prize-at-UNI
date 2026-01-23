@@ -1,61 +1,65 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+
+const teamMembers = [
+  {
+    name: "Saúl Canturín",
+    role: "Campus Director en Hult Prize at UNI",
+    career: "Ingeniería Económica",
+    image: "/saul-canturin.png",
+    linkedin: "https://www.linkedin.com/in/saul-canturin-159a32187/",
+    area: "liderazgo",
+  },
+  {
+    name: "Jeanpier Robles",
+    role: "Partnership Team",
+    career: "Ingeniería de Software",
+    image: "/jeanpier-robles.png",
+    linkedin: "https://www.linkedin.com/in/jeanpier-robles/",
+    area: "partnership",
+  },
+  {
+    name: "Renato Gutiérrez",
+    role: "Partnership Team",
+    career: "Ingeniería de Sistemas",
+    image: "/renato-gutierrez.png",
+    linkedin: "https://www.linkedin.com/in/renato-gutierrez/",
+    area: "partnership",
+  },
+  {
+    name: "Lindher Cardenas",
+    role: "Partnership Team",
+    career: "Ingeniería de Telecomunicaciones",
+    image: "/lindher-cardenas.png",
+    linkedin:
+      "https://www.linkedin.com/in/napoleon-lindher-cardenas-sanchez-871952258/",
+    area: "partnership",
+  },
+];
+
+const carouselMembers = [...teamMembers, ...teamMembers, ...teamMembers];
 ---
 
 <Layout title="Nosotros | Hult Prize at UNI 2026">
   <!-- Navbar (Misma que en home pero con rutas relativas) -->
-  <header
-    class="fixed top-0 w-full z-50 bg-hult-black/50 backdrop-blur-md border-b border-white/10"
-  >
-    <div class="container mx-auto px-6 h-20 flex items-center justify-between">
-      <div class="flex items-center gap-2">
-        <a href="/" class="block">
-          <img
-            src="/logos/hult-prize-logo.png"
-            alt="Hult Prize UNI"
-            class="h-14 md:h-20 w-auto object-contain"
-          />
-        </a>
-      </div>
-      <nav class="hidden md:flex gap-8 items-center">
-        <a
-          href="/"
-          class="text-sm font-medium hover:text-hult-magenta transition-colors"
-          >Inicio</a
-        >
-        <a
-          href="/nosotros"
-          class="text-sm font-medium text-hult-magenta transition-colors"
-          >Nosotros</a
-        >
-        <a
-          href="/#cronograma"
-          class="text-sm font-medium hover:text-hult-magenta transition-colors"
-          >Cronograma</a
-        >
-        <a
-          href="/#impacto"
-          class="text-sm font-medium hover:text-hult-magenta transition-colors"
-          >Impacto</a
-        >
-      </nav>
-      <a
-        href="https://forms.gle/TU-LINK-AQUI"
-        target="_blank"
-        class="px-6 py-2.5 bg-hult-magenta hover:bg-hult-magenta-dark text-white font-bold rounded-full transition-all text-sm shadow-[0_0_20px_rgba(233,30,140,0.5)] hover:shadow-[0_0_30px_rgba(233,30,140,0.7)]"
-      >
-        Inscribir Equipo
-      </a>
-    </div>
-  </header>
+  <Navbar />
 
-  <main class="pt-24">
+  <!-- Fondo Estático Global (Fixed) - Sin Destellos -->
+  <div class="fixed inset-0 z-0 pointer-events-none">
+    <!-- Capa Base Sólida -->
+    <div class="absolute inset-0 bg-hult-black"></div>
+
+    <!-- Degradado Sutil General -->
+    <div
+      class="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(233,30,140,0.15)_0%,_transparent_80%)]"
+    >
+    </div>
+  </div>
+
+  <main class="relative z-10 pt-24">
     <!-- Header Page -->
     <section class="relative py-20 overflow-hidden">
-      <div
-        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-hult-magenta/10 rounded-full blur-[120px] -z-10"
-      >
-      </div>
       <div class="container mx-auto px-6 text-center">
         <h1 class="text-5xl md:text-7xl font-black mb-6">
           Nuestro <span class="text-hult-magenta">Equipo</span>
@@ -70,59 +74,121 @@ import Layout from "../layouts/Layout.astro";
     <!-- Teams Grid -->
     <section class="pb-24 relative">
       <div class="container mx-auto px-6">
-        <!-- Director General -->
-        <div class="flex justify-center mb-16">
-          <a
-            href="https://www.linkedin.com/in/saul-canturin-159a32187/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="w-full max-w-sm group relative bg-white border border-white/10 rounded-3xl overflow-hidden hover:border-hult-magenta/50 transition-all duration-300 transform hover:-translate-y-2 block"
+        <!-- Liderazgo (Carousel) -->
+        <div class="mb-16 max-w-5xl mx-auto relative">
+          <button
+            id="carousel-prev"
+            class="absolute left-2 md:-left-16 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full bg-hult-black/50 text-white hover:bg-hult-magenta hover:scale-110 transition-all backdrop-blur-sm shadow-lg cursor-pointer hidden md:block"
+            aria-label="Anterior"
           >
-            <!-- Image Container -->
-            <div class="aspect-[4/5] bg-neutral-800 relative overflow-hidden">
-              <!-- Placeholder for Profile Image -->
-              <div
-                class="absolute inset-0 flex items-center justify-center text-neutral-600 group-hover:scale-105 transition-transform duration-700 bg-neutral-200"
-              >
-                <span class="text-8xl">👔</span>
-              </div>
-            </div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 19.5L8.25 12l7.5-7.5"></path>
+            </svg>
+          </button>
 
-            <!-- Text Content -->
-            <div class="p-8 bg-white text-left">
-              <h4
-                class="text-3xl font-black text-[#1A1A1A] mb-2 group-hover:text-hult-magenta transition-colors"
-              >
-                Saúl Canturín
-              </h4>
-              <p class="text-hult-magenta font-bold text-lg mb-2">
-                Campus Director en Hult Prize at UNI
-              </p>
-              <p class="text-gray-500 font-medium text-base">
-                Ingeniería Económica
-              </p>
-            </div>
-          </a>
+          <button
+            id="carousel-next"
+            class="absolute right-2 md:-right-16 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full bg-hult-black/50 text-white hover:bg-hult-magenta hover:scale-110 transition-all backdrop-blur-sm shadow-lg cursor-pointer hidden md:block"
+            aria-label="Siguiente"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+            </svg>
+          </button>
+
+          <div
+            id="team-carousel"
+            class="flex overflow-x-auto gap-8 snap-x snap-mandatory pb-8 -mx-6 px-6 md:mx-0 md:px-0"
+            style="scrollbar-width: none; -ms-overflow-style: none;"
+          >
+            {
+              carouselMembers.map((member, index) => (
+                <a
+                  href={member.linkedin}
+                  target={member.linkedin !== "#" ? "_blank" : undefined}
+                  rel="noopener noreferrer"
+                  draggable="false"
+                  class="snap-center shrink-0 w-[75%] sm:w-[calc(50%-16px)] md:w-[calc(33.333%-22px)] group relative bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-hult-magenta/50 transition-all duration-300 transform hover:-translate-y-2 block select-none"
+                  data-index={index}
+                  data-area={member.area}
+                >
+                  <div class="aspect-[4/5] bg-neutral-800 relative overflow-hidden pointer-events-none">
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      class={`w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ${member.image.includes("placeholder") ? "opacity-80 group-hover:opacity-100" : ""}`}
+                      draggable="false"
+                    />
+                    {member.linkedin !== "#" && (
+                      <div class="absolute bottom-3 right-3 bg-white/90 p-1.5 rounded-lg shadow-lg backdrop-blur-sm group-hover:bg-white transition-colors z-20">
+                        <img
+                          src="/linkedin-logo.png"
+                          alt="LinkedIn"
+                          class="w-5 h-5 object-contain"
+                        />
+                      </div>
+                    )}
+                  </div>
+                  <div class="p-8 text-left">
+                    <h4 class="text-3xl font-black text-white mb-2 group-hover:text-hult-magenta transition-colors">
+                      {member.name}
+                    </h4>
+                    <p class="text-hult-magenta font-bold text-lg mb-2">
+                      {member.role}
+                    </p>
+                    <p class="text-gray-400 font-medium text-base">
+                      {member.career}
+                    </p>
+                  </div>
+                </a>
+              ))
+            }
+          </div>
         </div>
 
         <!-- Áreas: Partnership, Marketing, Eventos -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           <!-- Partnership -->
           <article
-            class="group relative bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-hult-magenta/50 transition-colors duration-300"
+            id="area-partnership"
+            class="group relative bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-hult-magenta/50 [&.is-active]:border-hult-magenta/50 [&.is-active]:shadow-[0_0_30px_rgba(255,255,255,0.3)] transition-all duration-300"
           >
             <div class="aspect-video bg-neutral-800 relative overflow-hidden">
-              <div
-                class="absolute inset-0 flex items-center justify-center text-neutral-600 group-hover:scale-105 transition-transform duration-700"
-              >
-                <span class="text-7xl">🤝</span>
-              </div>
+              <img
+                src="/partnership.jpg"
+                alt="Partnership"
+                class="w-full h-full object-cover group-hover:scale-105 group-[.is-active]:scale-110 transition-transform duration-700"
+              />
               <div
                 class="absolute inset-0 bg-linear-to-t from-hult-black/90 via-transparent to-transparent"
               >
               </div>
               <div class="absolute bottom-6 left-8">
-                <h4 class="text-2xl font-black text-white">Partnership</h4>
+                <h4
+                  class="text-2xl font-black text-white group-hover:text-hult-magenta group-[.is-active]:text-hult-magenta transform group-[.is-active]:scale-110 origin-bottom-left transition-all duration-300"
+                >
+                  Partnership
+                </h4>
               </div>
             </div>
             <div class="p-6">
@@ -138,12 +204,34 @@ import Layout from "../layouts/Layout.astro";
                 </h5>
                 <ul class="space-y-2 text-sm text-white/80">
                   <li class="flex items-center gap-2">
-                    <span class="w-1 h-1 rounded-full bg-white/30"></span> Miembro
-                    Equipo
+                    <span class="w-1 h-1 rounded-full bg-white/30"></span>
+                    <a
+                      href="https://www.linkedin.com/in/jeanpier-robles/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="hover:text-hult-magenta transition-colors"
+                      >Robles Fabian Jeanpier Alexander</a
+                    >
                   </li>
                   <li class="flex items-center gap-2">
-                    <span class="w-1 h-1 rounded-full bg-white/30"></span> Miembro
-                    Equipo
+                    <span class="w-1 h-1 rounded-full bg-white/30"></span>
+                    <a
+                      href="https://www.linkedin.com/in/renato-gutierrez/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="hover:text-hult-magenta transition-colors"
+                      >Renato Gutiérrez Serra</a
+                    >
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="w-1 h-1 rounded-full bg-white/30"></span>
+                    <a
+                      href="https://www.linkedin.com/in/napoleon-lindher-cardenas-sanchez-871952258/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="hover:text-hult-magenta transition-colors"
+                      >Napoleon Lindher Cardenas Sanchez</a
+                    >
                   </li>
                 </ul>
               </div>
@@ -152,20 +240,25 @@ import Layout from "../layouts/Layout.astro";
 
           <!-- Marketing -->
           <article
-            class="group relative bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-hult-magenta/50 transition-colors duration-300"
+            id="area-marketing"
+            class="group relative bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-hult-magenta/50 [&.is-active]:border-hult-magenta/50 [&.is-active]:shadow-[0_0_30px_rgba(255,255,255,0.3)] transition-all duration-300"
           >
             <div class="aspect-video bg-neutral-800 relative overflow-hidden">
-              <div
-                class="absolute inset-0 flex items-center justify-center text-neutral-600 group-hover:scale-105 transition-transform duration-700"
-              >
-                <span class="text-7xl">📢</span>
-              </div>
+              <img
+                src="/marketing.png"
+                alt="Marketing"
+                class="w-full h-full object-cover scale-110 group-hover:scale-125 group-[.is-active]:scale-135 transition-transform duration-700"
+              />
               <div
                 class="absolute inset-0 bg-linear-to-t from-hult-black/90 via-transparent to-transparent"
               >
               </div>
               <div class="absolute bottom-6 left-8">
-                <h4 class="text-2xl font-black text-white">Marketing</h4>
+                <h4
+                  class="text-2xl font-black text-white group-hover:text-hult-magenta group-[.is-active]:text-hult-magenta transform group-[.is-active]:scale-110 origin-bottom-left transition-all duration-300"
+                >
+                  Marketing
+                </h4>
               </div>
             </div>
             <div class="p-6">
@@ -195,20 +288,25 @@ import Layout from "../layouts/Layout.astro";
 
           <!-- Eventos -->
           <article
-            class="group relative bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-hult-magenta/50 transition-colors duration-300"
+            id="area-eventos"
+            class="group relative bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-hult-magenta/50 [&.is-active]:border-hult-magenta/50 [&.is-active]:shadow-[0_0_30px_rgba(255,255,255,0.3)] transition-all duration-300"
           >
             <div class="aspect-video bg-neutral-800 relative overflow-hidden">
-              <div
-                class="absolute inset-0 flex items-center justify-center text-neutral-600 group-hover:scale-105 transition-transform duration-700"
-              >
-                <span class="text-7xl">🎉</span>
-              </div>
+              <img
+                src="/eventos.jpg"
+                alt="Eventos"
+                class="w-full h-full object-cover group-hover:scale-105 group-[.is-active]:scale-110 transition-transform duration-700"
+              />
               <div
                 class="absolute inset-0 bg-linear-to-t from-hult-black/90 via-transparent to-transparent"
               >
               </div>
               <div class="absolute bottom-6 left-8">
-                <h4 class="text-2xl font-black text-white">Eventos</h4>
+                <h4
+                  class="text-2xl font-black text-white group-hover:text-hult-magenta group-[.is-active]:text-hult-magenta transform group-[.is-active]:scale-110 origin-bottom-left transition-all duration-300"
+                >
+                  Eventos
+                </h4>
               </div>
             </div>
             <div class="p-6">
@@ -236,7 +334,149 @@ import Layout from "../layouts/Layout.astro";
             </div>
           </article>
         </div>
+
+        <!-- Info Card: Qué es Hult Prize at UNI -->
+        <div class="mt-24 max-w-5xl mx-auto">
+          <div
+            class="bg-linear-to-r from-hult-magenta to-hult-magenta-dark rounded-3xl p-8 md:p-12 text-white shadow-[0_0_40px_rgba(230,0,126,0.3)]"
+          >
+            <div class="flex flex-col md:flex-row gap-6 md:gap-8 items-start">
+              <div
+                class="shrink-0 bg-white/20 p-4 rounded-2xl backdrop-blur-sm"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-10 h-10"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15.042 21.672 13.684 16.6m0 0-2.51 2.225.569-9.47 5.227 7.917-3.286-.672ZM12 2.25V4.5m5.834.166-1.591 1.591M20.25 10.5H18M7.757 14.743l-1.59 1.59M6 10.5H3.75m4.007-4.243-1.59-1.59"
+                  ></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-2xl md:text-3xl font-black mb-4">
+                  ¿Qué es Hult Prize at UNI?
+                </h3>
+                <p class="text-white/90 text-lg leading-relaxed">
+                  Hult Prize at UNI es la plataforma local de la competencia de
+                  emprendimiento social más grande del mundo, donde estudiantes
+                  universitarios transforman ideas innovadoras en soluciones que
+                  impactan positivamente al mundo. Nos alineamos con los
+                  Objetivos de Desarrollo Sostenible (ODS) de las Naciones
+                  Unidas, impulsando proyectos que aborden los retos más
+                  apremiantes de nuestra sociedad.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slogan -->
+        <div class="mt-16 text-center max-w-4xl mx-auto px-4">
+          <p class="text-white text-xl md:text-2xl font-medium leading-relaxed">
+            "Empoderamos a estudiantes para innovar y transformar el mundo con
+            soluciones alineadas a los ODS."
+          </p>
+        </div>
       </div>
     </section>
   </main>
 </Layout>
+
+<script>
+  const carousel = document.getElementById("team-carousel");
+
+  // Highlight logic for members and areas
+  const memberCards = document.querySelectorAll("[data-area]");
+  memberCards.forEach((card) => {
+    card.addEventListener("mouseenter", () => {
+      const areaKey = card.getAttribute("data-area");
+      if (areaKey) {
+        const targetArea = document.getElementById(`area-${areaKey}`);
+        if (targetArea) {
+          targetArea.classList.add("is-active");
+        }
+      }
+    });
+
+    card.addEventListener("mouseleave", () => {
+      const areaKey = card.getAttribute("data-area");
+      if (areaKey) {
+        const targetArea = document.getElementById(`area-${areaKey}`);
+        if (targetArea) {
+          targetArea.classList.remove("is-active");
+        }
+      }
+    });
+  });
+
+  if (carousel) {
+    const checkScroll = () => {
+      const scrollLeft = carousel.scrollLeft;
+      const scrollWidth = carousel.scrollWidth;
+      const clientWidth = carousel.clientWidth;
+      const thirdWidth = scrollWidth / 3;
+
+      // If we scroll into the first third (left buffer), jump to the middle third
+      if (scrollLeft < 50) {
+        // small buffer
+        carousel.style.scrollBehavior = "auto";
+        carousel.scrollLeft = scrollLeft + thirdWidth;
+        carousel.style.scrollBehavior = "smooth";
+      }
+      // If we scroll into the last third (right buffer), jump to the middle third
+      else if (scrollLeft >= thirdWidth * 2 - 50) {
+        carousel.style.scrollBehavior = "auto";
+        carousel.scrollLeft = scrollLeft - thirdWidth;
+        carousel.style.scrollBehavior = "smooth";
+      }
+    };
+
+    // Initialize scroll position to the middle set (Set 2)
+    const initScroll = () => {
+      carousel.style.scrollBehavior = "auto"; // Disable smooth scroll for init
+      carousel.scrollLeft = carousel.scrollWidth / 3;
+      // Re-enable smooth scroll after a tick
+      setTimeout(() => {
+        carousel.style.scrollBehavior = "smooth";
+      }, 50);
+    };
+
+    // Initialize logic
+    // We need to wait for images/layout to stabilize mostly, but rough set is fine
+    window.addEventListener("load", initScroll);
+    // Also try immediately incase load already happened
+    initScroll();
+
+    // Attach scroll listener
+    carousel.addEventListener("scroll", checkScroll);
+
+    // Buttons
+    const prevBtn = document.getElementById("carousel-prev");
+    const nextBtn = document.getElementById("carousel-next");
+
+    if (prevBtn && nextBtn) {
+      prevBtn.addEventListener("click", () => {
+        const card = carousel.querySelector("a");
+        if (card) {
+          const scrollAmount = card.clientWidth + 32; // width + gap
+          carousel.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+        }
+      });
+
+      nextBtn.addEventListener("click", () => {
+        const card = carousel.querySelector("a");
+        if (card) {
+          const scrollAmount = card.clientWidth + 32;
+          carousel.scrollBy({ left: scrollAmount, behavior: "smooth" });
+        }
+      });
+    }
+  }
+</script>

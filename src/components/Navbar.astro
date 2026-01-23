@@ -1,0 +1,167 @@
+---
+const pathname = new URL(Astro.request.url).pathname;
+---
+
+<header
+  id="main-header"
+  class="fixed top-0 w-full z-50 bg-hult-black/50 backdrop-blur-md border-b border-white/10 transition-all duration-300"
+>
+  <div class="container mx-auto px-6 h-20 flex items-center justify-between">
+    <div class="flex items-center gap-2">
+      <a
+        href="/"
+        class="text-xl md:text-2xl font-black tracking-tighter text-white hover:text-hult-magenta transition-colors wrap-break-word flex flex-col md:block"
+      >
+        HULT PRIZE <span class="text-hult-magenta">UNI</span>
+      </a>
+    </div>
+
+    <!-- Desktop Nav -->
+    <nav class="hidden lg:flex gap-8 items-center">
+      <a
+        href="/"
+        class={`text-sm font-medium transition-colors ${pathname === "/" ? "text-hult-magenta" : "text-white hover:text-hult-magenta"}`}
+        >Inicio</a
+      >
+      <a
+        href="/nosotros"
+        class={`text-sm font-medium transition-colors ${pathname.startsWith("/nosotros") ? "text-hult-magenta" : "text-white hover:text-hult-magenta"}`}
+        >Nosotros</a
+      >
+      <a
+        href="/cronograma"
+        class={`text-sm font-medium transition-colors ${pathname.startsWith("/cronograma") ? "text-hult-magenta" : "text-white hover:text-hult-magenta"}`}
+        >Cronograma</a
+      >
+      <a
+        href="/impacto"
+        class={`text-sm font-medium transition-colors ${pathname.startsWith("/impacto") ? "text-hult-magenta" : "text-white hover:text-hult-magenta"}`}
+        >Impacto</a
+      >
+      <a
+        href="/#mentores"
+        class="text-sm font-medium text-white hover:text-hult-magenta transition-colors"
+        >Mentores</a
+      >
+    </nav>
+
+    <div class="flex items-center gap-4">
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLScj15fWnJ35oLOlqTxl-xF5JCh2iz_nIIOjF1M4KkYOHS-p8A/viewform"
+        target="_blank"
+        class="hidden sm:inline-block px-6 py-2.5 bg-hult-magenta hover:bg-hult-magenta-dark text-white font-bold rounded-full transition-all text-sm shadow-[0_0_20px_rgba(233,30,140,0.5)] hover:shadow-[0_0_30px_rgba(233,30,140,0.7)]"
+      >
+        Inscribir Equipo
+      </a>
+
+      <!-- Mobile Menu Toggle -->
+      <button
+        id="menu-toggle"
+        class="lg:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5 focus:outline-none group"
+        aria-label="Toggle Menu"
+      >
+        <span
+          class="w-6 h-0.5 bg-white transition-all group-[.open]:rotate-45 group-[.open]:translate-y-2"
+        ></span>
+        <span class="w-6 h-0.5 bg-white transition-all group-[.open]:opacity-0"
+        ></span>
+        <span
+          class="w-6 h-0.5 bg-white transition-all group-[.open]:-rotate-45 group-[.open]:-translate-y-2"
+        ></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu Content -->
+  <div
+    id="mobile-menu"
+    class="lg:hidden absolute top-full left-0 w-full bg-hult-black/95 backdrop-blur-xl border-b border-white/10 hidden flex-col p-8 gap-6 animate-fade-in"
+  >
+    <nav class="flex flex-col gap-6">
+      <a
+        href="/"
+        class={`text-2xl font-black transition-colors ${pathname === "/" ? "text-hult-magenta" : "text-white"}`}
+        >Inicio</a
+      >
+      <a
+        href="/nosotros"
+        class={`text-2xl font-black transition-colors ${pathname.startsWith("/nosotros") ? "text-hult-magenta" : "text-white"}`}
+        >Nosotros</a
+      >
+      <a
+        href="/cronograma"
+        class={`text-2xl font-black transition-colors ${pathname.startsWith("/cronograma") ? "text-hult-magenta" : "text-white"}`}
+        >Cronograma</a
+      >
+      <a
+        href="/impacto"
+        class={`text-2xl font-black transition-colors ${pathname.startsWith("/impacto") ? "text-hult-magenta" : "text-white"}`}
+        >Impacto</a
+      >
+      <a href="/#mentores" class="text-2xl font-black text-white">Mentores</a>
+    </nav>
+    <a
+      href="https://docs.google.com/forms/d/e/1FAIpQLScj15fWnJ35oLOlqTxl-xF5JCh2iz_nIIOjF1M4KkYOHS-p8A/viewform"
+      target="_blank"
+      class="w-full py-4 bg-hult-magenta text-white text-center font-black text-xl rounded-2xl shadow-[0_0_20px_rgba(233,30,140,0.3)]"
+    >
+      Inscribir Equipo
+    </a>
+  </div>
+</header>
+
+<script>
+  const menuToggle = document.getElementById("menu-toggle");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const header = document.getElementById("main-header");
+
+  if (menuToggle && mobileMenu) {
+    menuToggle.addEventListener("click", () => {
+      menuToggle.classList.toggle("open");
+      mobileMenu.classList.toggle("hidden");
+      mobileMenu.classList.toggle("flex");
+
+      // Prevent body scroll when menu is open
+      if (!mobileMenu.classList.contains("hidden")) {
+        document.body.style.overflow = "hidden";
+      } else {
+        document.body.style.overflow = "";
+      }
+    });
+
+    // Close menu when clicking a link
+    mobileMenu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        menuToggle.classList.remove("open");
+        mobileMenu.classList.add("hidden");
+        mobileMenu.classList.remove("flex");
+        document.body.style.overflow = "";
+      });
+    });
+  }
+
+  // Scroll effect
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 20) {
+      header?.classList.add("bg-black/80", "py-1");
+    } else {
+      header?.classList.remove("bg-black/80", "py-1");
+    }
+  });
+</script>
+
+<style>
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .animate-fade-in {
+    animation: fade-in 0.3s ease-out forwards;
+  }
+</style>

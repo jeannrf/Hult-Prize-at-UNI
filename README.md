@@ -3,6 +3,7 @@
 # 🏆 Hult Prize at UNI 2026
 
 ### Official Landing Page | Universidad Nacional de Ingeniería
+https://hult-prize-at-uni.vercel.app/
 
 [![Astro](https://img.shields.io/badge/Astro-0C1222?style=for-the-badge&logo=astro&logoColor=FDFDFE)](https://astro.build/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
