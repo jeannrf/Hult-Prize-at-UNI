@@ -524,17 +524,17 @@ import Navbar from "../components/Navbar.astro";
       threshold: 0,
     };
 
-    const handleIntersect = (entries) => {
+    const handleIntersect = (entries: IntersectionObserverEntry[]) => {
       // Check if desktop
       if (window.matchMedia("(min-width: 768px)").matches) {
         // Safety: ensure class is removed if we somehow got here looking like mobile
-        entries.forEach((entry) => {
+        entries.forEach((entry: IntersectionObserverEntry) => {
           entry.target.classList.remove("active-card");
         });
         return;
       }
 
-      entries.forEach((entry) => {
+      entries.forEach((entry: IntersectionObserverEntry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("active-card");
         } else {
